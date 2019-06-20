@@ -13,15 +13,19 @@ The ideal machine learning processing pipeline is to develop a multivariate clas
 | Engagement Layer:                |
 | AWS S3 Buckets - Parquet Files   |
 |----------------------------------|
+
 | Analytics Layer:                 |
 | PySpark - MLlib & Python - Keras |
 |----------------------------------|
+
 | Integration Layer:               |
 | PySparkSQL                       |
 |----------------------------------|
+
 | Persistence Layer                |
 | AWS - MySQL RDS                  |
 |----------------------------------|
+
 | Infrastructure Layer             |
 | AWS - EC2 Instances              |
 |----------------------------------|
