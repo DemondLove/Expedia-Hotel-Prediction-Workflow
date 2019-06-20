@@ -8,8 +8,8 @@ Due to the high-volumes of data that we need to work with, we need a computing e
 
 The ideal machine learning processing pipeline is to develop a multivariate classification algorithm on a distributed Spark cluster of AWS EC2 instances, consisting of a hybrid of principle component analysis and deep learning, to predict which hotel a user will book with data from customer behavior logs pulled from an AWS RDS, then output predictions to an AWS S3 bucket. As with all data intensive applications, we need to develop a five stage framework, consisting of an infrastructure layer, persistence layer, integration layer, analytics layer, and engagement layer:
 
-###| Data Intensive App Framework     |
-###|----------------------------------|
+## Data Intensive App Framework
+
 | Engagement Layer:                |
 | AWS S3 Buckets - Parquet Files   |
 |----------------------------------|
