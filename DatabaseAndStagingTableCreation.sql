@@ -1,0 +1,30 @@
+DROP DATABASE IF EXISTS `expedia`;
+CREATE DATABASE `expedia`; 
+USE `expedia`;
+
+CREATE TABLE train (date_time TEXT);
+ALTER TABLE train ADD COLUMN site_name TEXT;
+ALTER TABLE train ADD COLUMN posa_continent TEXT;
+ALTER TABLE train ADD COLUMN user_location_country TEXT;
+ALTER TABLE train ADD COLUMN user_location_region TEXT;
+ALTER TABLE train ADD COLUMN user_location_city TEXT;
+ALTER TABLE train ADD COLUMN orig_destination_distance TEXT;
+ALTER TABLE train ADD COLUMN user_id TEXT;
+ALTER TABLE train ADD COLUMN is_mobile TEXT;
+ALTER TABLE train ADD COLUMN is_package TEXT;
+ALTER TABLE train ADD COLUMN `channel` TEXT;
+ALTER TABLE train ADD COLUMN srch_ci TEXT;
+ALTER TABLE train ADD COLUMN srch_co TEXT;
+ALTER TABLE train ADD COLUMN srch_adults_cnt TEXT;
+ALTER TABLE train ADD COLUMN srch_children_cnt TEXT;
+ALTER TABLE train ADD COLUMN srch_rm_cnt TEXT;
+ALTER TABLE train ADD COLUMN srch_destination_id TEXT;
+ALTER TABLE train ADD COLUMN srch_destination_type_id TEXT;
+ALTER TABLE train ADD COLUMN is_booking TEXT;
+ALTER TABLE train ADD COLUMN cnt TEXT;
+ALTER TABLE train ADD COLUMN hotel_continent TEXT;
+ALTER TABLE train ADD COLUMN hotel_country TEXT;
+ALTER TABLE train ADD COLUMN hotel_market TEXT;
+ALTER TABLE train ADD COLUMN hotel_cluster TEXT;
+
+CREATE TABLE trainSample SELECT * FROM train;
