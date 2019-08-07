@@ -4,9 +4,9 @@ import inspect
 import numpy as np
 import pandas as pd
 
-parentPath = '/'.join(sys.path[0].split('/')[:-1])
+#parentPath = '/'.join(sys.path[0].split('/')[:-1])
 
-df = pd.read_csv(parentPath+'/data/pd___dfExpediaSample.csv')
+#df = pd.read_csv(parentPath+'/data/pd___dfExpediaSample.csv')
 
 def updateIDFieldsToCategoricalFeatures(df):
     '''
@@ -35,7 +35,7 @@ def updateIDFieldsToCategoricalFeatures(df):
     
     return df
 
-def updateIS_FieldsToBooleanFeatures(df):
+def updateISFieldsToBooleanFeatures(df):
     '''
     Update the boolean fields to the correct datatype
     Specifically, is_mobile, is_package, is_booking
