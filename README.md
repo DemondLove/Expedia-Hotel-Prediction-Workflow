@@ -21,3 +21,9 @@ Integration Layer: PySparkSQL
 Analytics Layer: PySpark - MLlib & Python - Keras
 
 Engagement Layer: AWS S3 Buckets - Parquet Files
+
+## Data Preparation Directed Acyclic Graph (DAG) [Integration Layer]
+
+Functions can be found in the src/dataPreparation.py
+
+Dataset from Presistence Layer --> updateIDFieldsToCategoricalFeatures --> updateIS_FieldsToBooleanFeatures --> updateDtTmFieldsToDatetimeFeatures --> removeHighCardinalityFeatures --> removeHighNULLCntFeatures --> removeRemainingRecordsWithNULLS --> convertCategoricalVariablesToDummyVariables --> Dataset stored in the Analytics Layer
