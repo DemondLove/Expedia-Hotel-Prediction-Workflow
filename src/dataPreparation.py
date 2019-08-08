@@ -4,10 +4,6 @@ import inspect
 import numpy as np
 import pandas as pd
 
-#parentPath = '/'.join(sys.path[0].split('/')[:-1])
-
-#df = pd.read_csv(parentPath+'/data/pd___dfExpediaSample.csv')
-
 def updateIDFieldsToCategoricalFeatures(df):
     '''
     Update the ID fields to be categorical features
@@ -23,15 +19,10 @@ def updateIDFieldsToCategoricalFeatures(df):
     df['site_name'] = df['site_name'].astype('category')
     df['posa_continent'] = df['posa_continent'].astype('category')
     df['user_location_country'] = df['user_location_country'].astype('category')
-    df['user_location_region'] = df['user_location_region'].astype('category')
-    df['user_location_city'] = df['user_location_city'].astype('category')
-    df['user_id'] = df['user_id'].astype('category')
     df['channel'] = df['channel'].astype('category')
-    df['srch_destination_id'] = df['srch_destination_id'].astype('category')
     df['srch_destination_type_id'] = df['srch_destination_type_id'].astype('category')
     df['hotel_continent'] = df['hotel_continent'].astype('category')
     df['hotel_country'] = df['hotel_country'].astype('category')
-    df['hotel_market'] = df['hotel_market'].astype('category')
     
     return df
 
@@ -50,24 +41,6 @@ def updateISFieldsToBooleanFeatures(df):
     df['is_mobile'] = df['is_mobile'].astype('bool')
     df['is_package'] = df['is_package'].astype('bool')
     df['is_booking'] = df['is_booking'].astype('bool')
-    
-    return df
-
-def updateDtTmFieldsToDatetimeFeatures(df):
-    '''
-    Update the datetime fields to the correct datatype
-    Specifically, is_mobile, is_package, is_booking
-    
-    Parameters:
-    df (pd.DataFrame): Input dataset from Expedia Hotel Recommendations
-    
-    Returns:
-    df (pd.DataFrame): Converted dataFrame with the datetime fields updated to the correct datatype
-    '''
-    
-    df['date_time'] = pd.to_datetime(df['date_time'])
-    df['srch_ci'] = pd.to_datetime(df['srch_ci'])
-    df['srch_co'] = pd.to_datetime(df['srch_co'])
     
     return df
 

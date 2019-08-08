@@ -13,8 +13,6 @@ from importlib import reload
 
 reload(dp)
 
-# Types of asserts: https://docs.python.org/3/library/unittest.html
-
 class TestdataPreparation(unittest.TestCase):
     
     # Ensure that updateIDFieldsToCategoricalFeatures is properly updating the ID fields to be categorical features
@@ -34,15 +32,6 @@ class TestdataPreparation(unittest.TestCase):
         df = dp.updateISFieldsToBooleanFeatures(df)
         
         self.assertEqual(str(df['is_mobile'].dtype), 'bool')
-    
-    # Ensure that updateDtTmFieldsToDatetimeFeatures is properly updating the DtTm features to datetime64[ns]
-    def test_updateDtTmFieldsToDatetimeFeatures(self):
-        parentPath = '/'.join(sys.path[0].split('/')[:-1])
-        df = pd.read_csv(parentPath+'/Expedia-Hotel-Prediction-Workflow/data/pd_dfExpediaSample.csv')
-        
-        df = dp.updateDtTmFieldsToDatetimeFeatures(df)
-        
-        self.assertEqual(str(df['date_time'].dtype), 'datetime64[ns]')
         
     # Ensure that removeHighCardinalityFeatures is properly removing the high cardinality variables
     def test_removeHighCardinalityFeatures(self):

@@ -26,4 +26,4 @@ Engagement Layer: AWS S3 Buckets - Parquet Files
 
 Functions can be found in the src/dataPreparation.py
 
-Dataset from Presistence Layer --> updateIDFieldsToCategoricalFeatures --> updateISFieldsToBooleanFeatures --> updateDtTmFieldsToDatetimeFeatures --> removeHighCardinalityFeatures --> removeHighNULLCntFeatures --> removeRemainingRecordsWithNULLS --> convertCategoricalVariablesToDummyVariables --> Dataset stored in the Analytics Layer
+Dataset from Presistence Layer --> updateIDFieldsToCategoricalFeatures --> updateISFieldsToBooleanFeatures --> removeHighCardinalityFeatures --> removeHighNULLCntFeatures --> removeRemainingRecordsWithNULLS --> convertCategoricalVariablesToDummyVariables --> Dataset stored in the Analytics Layer
