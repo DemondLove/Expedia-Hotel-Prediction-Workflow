@@ -25,7 +25,7 @@ df = pd.read_csv(parentPath+'/data/pd___dfExpediaSample.csv')
 
 toc = time.process_time()
 
-logging.info(str(datetime.datetime.now()) + ': ' + "Read CSV Time elapsed: "+ str(round(toc-tic, 3))+ " seconds")
+logging.info(str(datetime.datetime.now()) + ': ' + "Import CSV Time elapsed: "+ str(round(toc-tic, 3))+ " seconds")
 
 ########
 
@@ -91,10 +91,12 @@ logging.info(str(datetime.datetime.now()) + ': ' + "convertCategoricalVariablesT
 
 tic = time.process_time()
 
-#pd_dfExpediaSample.to_csv(parentPath+'/data/pd_FullCleansedDataset.csv', index=False)
+df.to_csv(parentPath+'/data/pd_CleansedDataset.csv', index=False)
 
 toc = time.process_time()
 
 logging.info(str(datetime.datetime.now()) + ': ' + "Export CSV Time elapsed: "+ str(round(toc-tic, 3))+ " seconds")
 
 ########
+
+print('dataPreparationPipeline Complete!')
