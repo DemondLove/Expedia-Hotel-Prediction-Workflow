@@ -197,10 +197,10 @@ dataset.write.parquet("s3://expedia-hotel-recommendations-workflow/spark_OutputC
 dtc = DecisionTreeClassifier(labelCol="label", featuresCol="features")
 dtcm = dtc.fit(trainingData)
 
-# Save trained Logistic Regression Model to s3 Bucket
+# Save trained Logistic Regression Model to s3 Bucket for future use
 dtcm.save('s3://expedia-hotel-recommendations-workflow/dtcm_model')
 
-# Load Pre-Trained Logistic Regression Model
+# Load Pre-Trained Logistic Regression Model to illistrate how model will be imported for future use
 dtcModel = DecisionTreeClassificationModel.load("s3://expedia-hotel-recommendations-workflow/dtcm_model")
 
 # Make predictions with Decision Tree model on the Test Dataset
@@ -234,10 +234,10 @@ print("Decision Tree weightedRecall Error = %g" % (1.0 - dtcWeightedRecall))
 rf = RandomForestClassifier(labelCol="label", featuresCol="features", numTrees=10)
 rfm = rf.fit(trainingData)
 
-# Save trained Logistic Regression Model to s3 Bucket
+# Save trained Logistic Regression Model to s3 Bucket for future use
 rfm.save('s3://expedia-hotel-recommendations-workflow/rfm_model')
 
-# Load Pre-Trained Logistic Regression Model
+# Load Pre-Trained Logistic Regression Model to illistrate how model will be imported for future use
 rfModel = RandomForestClassificationModel.load("s3://expedia-hotel-recommendations-workflow/rfm_model")
 
 # Make predictions with Random Forest model
@@ -271,10 +271,10 @@ print("Random Forest weightedRecall Error = %g" % (1.0 - rfWeightedRecall))
 lr = LogisticRegression(maxIter=10, regParam=0.1)
 lrm = lr.fit(trainingData)
 
-# Save trained Logistic Regression Model to s3 Bucket
+# Save trained Logistic Regression Model to s3 Bucket for future use
 lrm.save('s3://expedia-hotel-recommendations-workflow/lrm_model')
 
-# Load Pre-Trained Logistic Regression Model
+# Load Pre-Trained Logistic Regression Model to illistrate how model will be imported for future use
 lrModel = LogisticRegressionModel.load("s3://expedia-hotel-recommendations-workflow/lrm_model")
 
 # Make predictions with the Logistic Regression Model
