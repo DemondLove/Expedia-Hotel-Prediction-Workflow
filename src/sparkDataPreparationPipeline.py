@@ -1,16 +1,19 @@
-#!/usr/bin/env python
+#!/usr/bin/env spark
 # encoding: utf-8
+import time
+
+tic = time.perf_counter()
 
 # Load Packages
-import os
-import sys
-import time
-import inspect
-import numpy as np
-import pandas as pd
 from pyspark.ml.feature import StringIndexer
 from pyspark.ml.feature import OneHotEncoder
 from pyspark.ml.feature import VectorAssembler
+from pyspark.ml.classification import DecisionTreeClassifier
+from pyspark.ml.evaluation import MulticlassClassificationEvaluator
+from pyspark.ml.classification import RandomForestClassifier
+from pyspark.ml.classification import LogisticRegression
+from pyspark.sql.functions import monotonically_increasing_id
+
 
 # Creating Spark Context
 from pyspark import SparkContext
@@ -26,14 +29,14 @@ spark = SparkSession.builder.getOrCreate()
 ########
 
 dfExpedia = spark.read.load(
-  '/data/train.csv',
+  '/home/kl/Documents/Expedia-Hotel-Prediction-Workflow/data/pd_dfExpediaSample.csv',
   format="csv",
   sep=",",
   inferSchema=True,
   header=True
 )
 
-dfExpedia.createOrReplaceTempView('dfSQL')
+dfExpedia.createOrReplaceTempView('dfExpedia')
 
 ########
 
@@ -191,3 +194,137 @@ dataset = va.transform(idxRes)
 
 ########
 
+dataset.write.parquet("/home/kl/Documents/Expedia-Hotel-Prediction-Workflow/data/spark_CleasedDataset.parquet")
+
+toc = time.perf_counter()
+
+print("Data Preprocessing:", round(toc-tic, 3), "seconds")
+
+tic = time.perf_counter()
+
+dataset.createOrReplaceTempView('dataset')
+
+dataset = sqlContext.sql('''
+                             SELECT
+                                 hotel_clusterIndxr AS label
+                                 , features
+                             FROM dataset
+                         ''')
+
+dataset = dataset.drop('hotel_clusterIndxr')
+
+# Split the data into training and test sets (30% held out for testing)
+(trainingData, testData) = dataset.randomSplit([0.7, 0.3])
+
+dtc = DecisionTreeClassifier(labelCol="label", featuresCol="features")
+
+dtcModel = dtc.fit(trainingData)
+
+# Make predictions.
+dtcPredictions = dtcModel.transform(testData)
+
+# Select (prediction, true label) and compute test error
+evaluator = MulticlassClassificationEvaluator(
+    labelCol="label", predictionCol="prediction", metricName="accuracy")
+dtcAccuracy = evaluator.evaluate(dtcPredictions)
+print("Decision Tree accuracy Error = %g" % (1.0 - dtcAccuracy))
+
+evaluator = MulticlassClassificationEvaluator(
+    labelCol="label", predictionCol="prediction", metricName="f1")
+dtcF1 = evaluator.evaluate(dtcPredictions)
+print("Decision Tree f1 Error = %g" % (1.0 - dtcF1))
+
+evaluator = MulticlassClassificationEvaluator(
+    labelCol="label", predictionCol="prediction", metricName="weightedPrecision")
+dtcWeightedPrecision = evaluator.evaluate(dtcPredictions)
+print("Decision Tree weightedPrecision Error = %g" % (1.0 - dtcWeightedPrecision))
+
+evaluator = MulticlassClassificationEvaluator(
+    labelCol="label", predictionCol="prediction", metricName="weightedRecall")
+dtcWeightedRecall = evaluator.evaluate(dtcPredictions)
+print("Decision Tree weightedRecall Error = %g" % (1.0 - dtcWeightedRecall))
+
+# Train a RandomForest model.
+rf = RandomForestClassifier(labelCol="label", featuresCol="features", numTrees=10)
+
+rfModel = rf.fit(trainingData)
+
+# Make predictions.
+rfPredictions = rfModel.transform(testData)
+
+# Select (prediction, true label) and compute test error
+evaluator = MulticlassClassificationEvaluator(
+    labelCol="label", predictionCol="prediction", metricName="accuracy")
+rfAccuracy = evaluator.evaluate(rfPredictions)
+print("Random Forest accuracy Error = %g" % (1.0 - rfAccuracy))
+
+evaluator = MulticlassClassificationEvaluator(
+    labelCol="label", predictionCol="prediction", metricName="f1")
+rfF1 = evaluator.evaluate(rfPredictions)
+print("Random Forest f1 Error = %g" % (1.0 - rfF1))
+
+evaluator = MulticlassClassificationEvaluator(
+    labelCol="label", predictionCol="prediction", metricName="weightedPrecision")
+rfWeightedPrecision = evaluator.evaluate(rfPredictions)
+print("Random Forest weightedPrecision Error = %g" % (1.0 - rfWeightedPrecision))
+
+evaluator = MulticlassClassificationEvaluator(
+    labelCol="label", predictionCol="prediction", metricName="weightedRecall")
+rfWeightedRecall = evaluator.evaluate(rfPredictions)
+print("Random Forest weightedRecall Error = %g" % (1.0 - rfWeightedRecall))
+
+lr = LogisticRegression(maxIter=10, regParam=0.1)
+
+# Fit the model
+lrModel = lr.fit(trainingData)
+
+# Make predictions.
+lrPredictions = lrModel.transform(testData)
+
+# Select (prediction, true label) and compute test error
+evaluator = MulticlassClassificationEvaluator(
+    labelCol="label", predictionCol="prediction", metricName="accuracy")
+lrAccuracy = evaluator.evaluate(lrPredictions)
+print("Logistic Regression accuracy Error = %g" % (1.0 - lrAccuracy))
+
+evaluator = MulticlassClassificationEvaluator(
+    labelCol="label", predictionCol="prediction", metricName="f1")
+lrF1 = evaluator.evaluate(lrPredictions)
+print("Logistic Regression f1 Error = %g" % (1.0 - lrF1))
+
+evaluator = MulticlassClassificationEvaluator(
+    labelCol="label", predictionCol="prediction", metricName="weightedPrecision")
+lrWeightedPrecision = evaluator.evaluate(lrPredictions)
+print("Logistic Regression weightedPrecision Error = %g" % (1.0 - lrWeightedPrecision))
+
+evaluator = MulticlassClassificationEvaluator(
+    labelCol="label", predictionCol="prediction", metricName="weightedRecall")
+lrWeightedRecall = evaluator.evaluate(lrPredictions)
+print("Logistic Regression weightedRecall Error = %g" % (1.0 - lrWeightedRecall))
+
+dtcPredictions = dtcPredictions.selectExpr("prediction as dtcPrediction")
+
+# Add increasing Ids, and they should be the same.
+dtcPredictions = dtcPredictions.withColumn("id", monotonically_increasing_id())
+
+rfPredictions = rfPredictions.selectExpr("prediction as rfPrediction")
+
+# Add increasing Ids, and they should be the same.
+rfPredictions = rfPredictions.withColumn("id", monotonically_increasing_id())
+
+lrPredictions = lrPredictions.selectExpr("prediction as lrPrediction")
+
+# Add increasing Ids, and they should be the same.
+lrPredictions = lrPredictions.withColumn("id", monotonically_increasing_id())
+
+# Add increasing Ids, and they should be the same.
+df3 = dtcPredictions.join(rfPredictions, "id", "inner")
+df4 = df3.join(lrPredictions, "id", "inner").drop("id")
+
+pd_df4 = df4.toPandas()
+
+pd_df4 = pd_df4.mode(axis=1)[0]
+
+toc = time.perf_counter()
+
+print("ML:", round(toc-tic, 3), "seconds")
