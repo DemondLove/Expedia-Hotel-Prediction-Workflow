@@ -8,6 +8,8 @@ Due to the high-volumes of data that we need to work with, we need a computing e
 
 The ideal machine learning processing pipeline for this type of project, and the one we will be implementing here, is to develop a multivariate classification algorithm on a distributed Spark cluster of AWS EC2 instances, consisting of an ensemble model of Decision Tree, Logistic Regression, and Random Forest algorithms using Spark's MLlib library, to predict which hotel a user will book with data from customer behavior logs pulled from an AWS S3 bucket in CSV format, then export the predictions to an AWS S3 bucket in Parquet format.
 
+Alongside this pipeline, we will be building a "standard" machine learning pipeline for comparison purposes, which will perform the same tasks using Pandas and Sklearn libraries, then run on a standalone EC2 instance.
+
 ## Data Intensive App Framework:
 
 As with all data intensive applications, we need to develop a five stage framework, consisting of an infrastructure layer, persistence layer, integration layer, analytics layer, and engagement layer. We will be utilizing the following tools for each layer:
