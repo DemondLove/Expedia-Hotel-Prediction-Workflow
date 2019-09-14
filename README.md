@@ -1,6 +1,6 @@
 # Expedia-Hotel-Prediction-Workflow
 
-Workflow created to test the processing of a large dataset, using Spark and Amazon Web Services.
+Workflow created for the processing of a large dataset, using Spark and Amazon Web Services.
 
 We will be using the "Expedia Hotel Recommendations" Kaggle dataset: https://www.kaggle.com/c/expedia-hotel-recommendations/overview
 
