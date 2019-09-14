@@ -22,7 +22,7 @@ Analytics Layer: PySpark - MLlib
 
 Engagement Layer: AWS S3 Buckets - Parquet Files
 
-## Data Preparation Directed Acyclic Graph (DAG) [Integration Layer]
+## Data Preparation DAG
 
 Functions can be found in the src/pandasDataPreparation.py
 
