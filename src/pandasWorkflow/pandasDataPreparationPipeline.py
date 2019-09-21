@@ -9,13 +9,15 @@ import pandas as pd
 from scipy.stats import skew
 from scipy.stats import kurtosis
 
-sys.path.insert(0, '/'.join(sys.path[0].split('/')[:-1]))
+sys.path.insert(0, '/'.join(sys.path[0].split('/')[:-2]))
 
-import src.pandasDataPreparation as dp
+import src.pandasWorkflow.pandasDataPreparation as dp
 
-parentPath = '/'.join(sys.path[1].split('/')[:-1])
+parentPath = '/'.join(sys.path[1].split('/')[:-2])
 
 logging.basicConfig(filename=parentPath+'/logging/dataPipelineLogging.log',level=logging.DEBUG)
+
+print(parentPath)
 
 ########
 

@@ -3,6 +3,10 @@ import os
 import inspect
 import numpy as np
 import pandas as pd
+import time
+import os,sys,inspect
+import logging
+import datetime
 
 def updateIDFieldsToCategoricalFeatures(df):
     '''
@@ -15,16 +19,18 @@ def updateIDFieldsToCategoricalFeatures(df):
     Returns:
     df (pd.DataFrame): Converted dataFrame with the ID fields containing updated datatypes
     '''
-    
-    df['site_name'] = df['site_name'].astype('category')
-    df['posa_continent'] = df['posa_continent'].astype('category')
-    df['user_location_country'] = df['user_location_country'].astype('category')
-    df['channel'] = df['channel'].astype('category')
-    df['srch_destination_type_id'] = df['srch_destination_type_id'].astype('category')
-    df['hotel_continent'] = df['hotel_continent'].astype('category')
-    df['hotel_country'] = df['hotel_country'].astype('category')
-    
-    return df
+    try:
+#         df['site_name'] = df['site_name'].astype('category')
+        df['posa_continent'] = df['posa_continent'].astype('category')
+        df['user_location_country'] = df['user_location_country'].astype('category')
+        df['channel'] = df['channel'].astype('category')
+        df['srch_destination_type_id'] = df['srch_destination_type_id'].astype('category')
+        df['hotel_continent'] = df['hotel_continent'].astype('category')
+        df['hotel_country'] = df['hotel_country'].astype('category')
+
+        return df
+    except Exception as e:
+        print(str(datetime.datetime.now()) + ': ' + 'An Error has Occured in updateIDFieldsToCategoricalFeatures: ' + str(e))
 
 def updateISFieldsToBooleanFeatures(df):
     '''
@@ -55,17 +61,19 @@ def removeHighCardinalityFeatures(df):
     Returns:
     df (pd.DataFrame): Converted dataFrame with the high cardinality categorical variables removed
     '''
-    
-    df.drop('date_time', axis=1, inplace=True)
-    df.drop('user_id', axis=1, inplace=True)
-    df.drop('user_location_city', axis=1, inplace=True)
-    df.drop('srch_ci', axis=1, inplace=True)
-    df.drop('srch_co', axis=1, inplace=True)
-    df.drop('srch_destination_id', axis=1, inplace=True)
-    df.drop('hotel_market', axis=1, inplace=True)
-    df.drop('user_location_region', axis=1, inplace=True)
-    
-    return df
+    try:
+        df.drop('date_time', axis=1, inplace=True)
+        df.drop('user_id', axis=1, inplace=True)
+        df.drop('user_location_city', axis=1, inplace=True)
+        df.drop('srch_ci', axis=1, inplace=True)
+        df.drop('srch_co', axis=1, inplace=True)
+        df.drop('srch_destination_id', axis=1, inplace=True)
+        df.drop('hotel_market', axis=1, inplace=True)
+        df.drop('user_location_region', axis=1, inplace=True)
+
+        return df
+    except Exception as e:
+        print(str(datetime.datetime.now()) + ': ' + 'An Error has Occured in removeHighCardinalityFeatures: ' + str(e))
 
 def removeHighNULLCntFeatures(df):
     '''
