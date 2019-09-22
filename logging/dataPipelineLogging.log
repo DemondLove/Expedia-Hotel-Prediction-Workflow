@@ -143,3 +143,136 @@ INFO:root:2019-09-21 19:07:57.481243: Export CSV Time elapsed: 30.232 seconds
 INFO:root:########
 INFO:root:2019-09-21 19:07:57.481565: End of Application Process
 INFO:root:########
+INFO:root:########
+INFO:root:2019-09-21 19:23:41.249132: New Application Process
+INFO:root:########
+INFO:root:2019-09-21 19:23:41.567465: Import CSV Time elapsed: 0.318 seconds
+INFO:root:2019-09-21 19:23:41.606677: updateIDFieldsToCategoricalFeatures Time elapsed: 0.039 seconds
+INFO:root:2019-09-21 19:23:41.613207: updateISFieldsToBooleanFeatures Time elapsed: 0.006 seconds
+INFO:root:2019-09-21 19:23:41.647149: removeHighCardinalityFeatures Time elapsed: 0.034 seconds
+INFO:root:2019-09-21 19:23:41.649256: removeHighNULLCntFeatures Time elapsed: 0.002 seconds
+INFO:root:2019-09-21 19:23:41.681916: removeRemainingRecordsWithNULLS Time elapsed: 0.033 seconds
+INFO:root:2019-09-21 19:23:42.376101: convertCategoricalVariablesToDummyVariables Time elapsed: 0.694 seconds
+INFO:root:2019-09-21 19:24:12.924724: Export CSV Time elapsed: 30.55 seconds
+INFO:root:########
+INFO:root:2019-09-21 19:24:12.925053: End of Application Process
+INFO:root:########
+INFO:root:########
+INFO:root:2019-09-21 19:24:25.745164: New Application Process
+INFO:root:########
+INFO:root:2019-09-21 19:24:26.023940: Import CSV Time elapsed: 0.279 seconds
+INFO:root:2019-09-21 19:24:26.054240: updateIDFieldsToCategoricalFeatures Time elapsed: 0.03 seconds
+INFO:root:2019-09-21 19:24:26.061069: updateISFieldsToBooleanFeatures Time elapsed: 0.007 seconds
+INFO:root:2019-09-21 19:24:26.093904: removeHighCardinalityFeatures Time elapsed: 0.033 seconds
+INFO:root:2019-09-21 19:24:26.096086: removeHighNULLCntFeatures Time elapsed: 0.002 seconds
+INFO:root:2019-09-21 19:24:26.122955: removeRemainingRecordsWithNULLS Time elapsed: 0.027 seconds
+INFO:root:2019-09-21 19:24:26.815211: convertCategoricalVariablesToDummyVariables Time elapsed: 0.692 seconds
+INFO:root:2019-09-21 19:24:57.114055: Export CSV Time elapsed: 30.3 seconds
+INFO:root:########
+INFO:root:2019-09-21 19:24:57.114318: End of Application Process
+INFO:root:########
+INFO:root:########
+INFO:root:2019-09-21 19:25:05.551724: New Application Process
+INFO:root:########
+INFO:root:2019-09-21 19:25:05.826360: Import CSV Time elapsed: 0.274 seconds
+INFO:root:2019-09-21 19:25:05.857131: updateIDFieldsToCategoricalFeatures Time elapsed: 0.031 seconds
+INFO:root:2019-09-21 19:25:05.863367: updateISFieldsToBooleanFeatures Time elapsed: 0.006 seconds
+INFO:root:2019-09-21 19:25:05.894264: removeHighCardinalityFeatures Time elapsed: 0.031 seconds
+INFO:root:2019-09-21 19:25:05.896330: removeHighNULLCntFeatures Time elapsed: 0.002 seconds
+INFO:root:2019-09-21 19:25:05.923523: removeRemainingRecordsWithNULLS Time elapsed: 0.027 seconds
+INFO:root:2019-09-21 19:25:06.592543: convertCategoricalVariablesToDummyVariables Time elapsed: 0.669 seconds
+INFO:root:2019-09-21 19:25:36.923820: Export CSV Time elapsed: 30.332 seconds
+INFO:root:########
+INFO:root:2019-09-21 19:25:36.924095: End of Application Process
+INFO:root:########
+INFO:root:########
+INFO:root:2019-09-21 19:34:50.843102: New Application Process
+INFO:root:########
+INFO:root:########
+INFO:root:2019-09-21 19:34:50.843296: New Application Process
+INFO:root:########
+INFO:root:########
+INFO:root:2019-09-21 19:34:50.843457: New Application Process
+INFO:root:########
+INFO:root:2019-09-21 19:34:51.152462: Import CSV Time elapsed: 0.309 seconds
+INFO:root:2019-09-21 19:34:51.198121: updateIDFieldsToCategoricalFeatures Time elapsed: 0.045 seconds
+INFO:root:2019-09-21 19:34:51.205019: updateISFieldsToBooleanFeatures Time elapsed: 0.007 seconds
+INFO:root:2019-09-21 19:34:51.238525: removeHighCardinalityFeatures Time elapsed: 0.033 seconds
+INFO:root:2019-09-21 19:34:51.240756: removeHighNULLCntFeatures Time elapsed: 0.002 seconds
+INFO:root:2019-09-21 19:34:51.275088: removeRemainingRecordsWithNULLS Time elapsed: 0.034 seconds
+INFO:root:2019-09-21 19:34:51.960889: convertCategoricalVariablesToDummyVariables Time elapsed: 0.686 seconds
+INFO:root:2019-09-21 19:35:22.135669: Export CSV Time elapsed: 30.176 seconds
+INFO:root:########
+INFO:root:2019-09-21 19:35:22.135931: End of Application Process
+INFO:root:########
+INFO:root:########
+INFO:root:2019-09-21 19:46:55.247947: New Application Process
+INFO:root:########
+INFO:root:2019-09-21 19:46:55.568043: Import CSV Time elapsed: 0.32 seconds
+INFO:root:2019-09-21 19:46:55.615454: updateIDFieldsToCategoricalFeatures Time elapsed: 0.047 seconds
+INFO:root:2019-09-21 19:46:55.624729: updateISFieldsToBooleanFeatures Time elapsed: 0.007 seconds
+INFO:root:2019-09-21 19:46:55.659920: removeHighCardinalityFeatures Time elapsed: 0.035 seconds
+INFO:root:2019-09-21 19:46:55.662505: removeHighNULLCntFeatures Time elapsed: 0.002 seconds
+INFO:root:2019-09-21 19:46:55.696399: removeRemainingRecordsWithNULLS Time elapsed: 0.034 seconds
+INFO:root:2019-09-21 19:46:56.440380: convertCategoricalVariablesToDummyVariables Time elapsed: 0.744 seconds
+INFO:root:2019-09-21 19:47:27.709823: Export CSV Time elapsed: 31.269 seconds
+INFO:root:########
+INFO:root:2019-09-21 19:47:27.710802: End of Application Process
+INFO:root:########
+INFO:root:########
+INFO:root:2019-09-21 19:53:51.744368: New Data Pipeline Process
+INFO:root:########
+INFO:root:2019-09-21 19:53:52.062986: Import CSV Time elapsed: 0.318 seconds
+INFO:root:2019-09-21 19:53:52.101420: updateIDFieldsToCategoricalFeatures Time elapsed: 0.038 seconds
+INFO:root:2019-09-21 19:53:52.101575: updateIDFieldsToCategoricalFeatures Time elapsed: 0.038 seconds
+INFO:root:2019-09-21 19:53:52.108106: updateISFieldsToBooleanFeatures Time elapsed: 0.006 seconds
+INFO:root:2019-09-21 19:53:52.108232: updateISFieldsToBooleanFeatures Time elapsed: 0.007 seconds
+INFO:root:2019-09-21 19:53:52.142422: removeHighCardinalityFeatures Time elapsed: 0.034 seconds
+INFO:root:2019-09-21 19:53:52.142560: removeHighCardinalityFeatures Time elapsed: 0.034 seconds
+INFO:root:2019-09-21 19:53:52.144601: removeHighNULLCntFeatures Time elapsed: 0.002 seconds
+INFO:root:2019-09-21 19:53:52.144706: removeHighNULLCntFeatures Time elapsed: 0.002 seconds
+INFO:root:2019-09-21 19:53:52.175927: removeRemainingRecordsWithNULLS Time elapsed: 0.031 seconds
+INFO:root:2019-09-21 19:53:52.176717: removeRemainingRecordsWithNULLS Time elapsed: 0.032 seconds
+INFO:root:2019-09-21 19:53:52.861961: convertCategoricalVariablesToDummyVariables Time elapsed: 0.685 seconds
+INFO:root:2019-09-21 19:53:52.877933: convertCategoricalVariablesToDummyVariables Time elapsed: 0.701 seconds
+INFO:root:2019-09-21 19:54:22.286981: Export CSV Time elapsed: 29.41 seconds
+INFO:root:########
+INFO:root:2019-09-21 20:01:02.063546: New Data Pipeline Process
+INFO:root:########
+INFO:root:2019-09-21 20:01:02.351795: Import CSV Time elapsed: 0.288 seconds
+INFO:root:2019-09-21 20:01:02.388771: updateIDFieldsToCategoricalFeatures Time elapsed: 0.037 seconds
+INFO:root:2019-09-21 20:01:02.397808: updateISFieldsToBooleanFeatures Time elapsed: 0.009 seconds
+INFO:root:2019-09-21 20:01:02.435925: removeHighCardinalityFeatures Time elapsed: 0.038 seconds
+INFO:root:2019-09-21 20:01:02.438062: removeHighNULLCntFeatures Time elapsed: 0.002 seconds
+INFO:root:2019-09-21 20:01:02.470153: removeRemainingRecordsWithNULLS Time elapsed: 0.032 seconds
+INFO:root:2019-09-21 20:01:03.243119: convertCategoricalVariablesToDummyVariables Time elapsed: 0.772 seconds
+INFO:root:########
+INFO:root:2019-09-21 20:01:28.288847: New Data Pipeline Process
+INFO:root:########
+INFO:root:2019-09-21 20:01:28.562799: Import CSV Time elapsed: 0.274 seconds
+INFO:root:2019-09-21 20:01:28.596001: updateIDFieldsToCategoricalFeatures Time elapsed: 0.033 seconds
+INFO:root:2019-09-21 20:01:28.604203: updateISFieldsToBooleanFeatures Time elapsed: 0.008 seconds
+INFO:root:2019-09-21 20:01:28.638133: removeHighCardinalityFeatures Time elapsed: 0.034 seconds
+INFO:root:2019-09-21 20:01:28.640450: removeHighNULLCntFeatures Time elapsed: 0.002 seconds
+INFO:root:2019-09-21 20:01:28.668146: removeRemainingRecordsWithNULLS Time elapsed: 0.028 seconds
+INFO:root:2019-09-21 20:01:29.342128: convertCategoricalVariablesToDummyVariables Time elapsed: 0.673 seconds
+INFO:root:########
+INFO:root:2019-09-21 20:01:47.905450: New Data Pipeline Process
+INFO:root:########
+INFO:root:2019-09-21 20:01:48.194550: Import CSV Time elapsed: 0.289 seconds
+INFO:root:2019-09-21 20:01:48.226909: updateIDFieldsToCategoricalFeatures Time elapsed: 0.032 seconds
+INFO:root:2019-09-21 20:01:48.233396: updateISFieldsToBooleanFeatures Time elapsed: 0.006 seconds
+INFO:root:2019-09-21 20:01:48.265780: removeHighCardinalityFeatures Time elapsed: 0.032 seconds
+INFO:root:2019-09-21 20:01:48.268202: removeHighNULLCntFeatures Time elapsed: 0.002 seconds
+INFO:root:2019-09-21 20:01:48.294779: removeRemainingRecordsWithNULLS Time elapsed: 0.026 seconds
+INFO:root:2019-09-21 20:01:48.963850: convertCategoricalVariablesToDummyVariables Time elapsed: 0.668 seconds
+INFO:root:2019-09-21 20:02:19.323199: Export CSV Time elapsed: 30.344 seconds
+INFO:root:########
+INFO:root:2019-09-21 20:02:19.324199: End of Data Pipeline Process
+INFO:root:########
+INFO:root:2019-09-21 20:10:56.552710: updateIDFieldsToCategoricalFeatures Time elapsed: 0.047 seconds
+INFO:root:2019-09-21 20:10:56.572465: convertCategoricalVariablesToDummyVariables Time elapsed: 0.018 seconds
+INFO:root:2019-09-21 20:10:56.890582: removeHighCardinalityFeatures Time elapsed: 0.036 seconds
+INFO:root:2019-09-21 20:10:57.162108: removeHighNULLCntFeatures Time elapsed: 0.012 seconds
+INFO:root:2019-09-21 20:10:57.457659: updateIDFieldsToCategoricalFeatures Time elapsed: 0.032 seconds
+INFO:root:2019-09-21 20:10:57.763146: updateISFieldsToBooleanFeatures Time elapsed: 0.017 seconds

@@ -5,9 +5,9 @@ import numpy as np
 import pandas as pd
 import unittest
 
-sys.path.insert(0, '/'.join(sys.path[0].split('/')[:-1]))
+sys.path.insert(0, '/'.join(sys.path[0].split('/')[:-2]))
 
-import src.dataPreparation as dp
+import src.pandasWorkflow.pandasDataPreparation as dp
 
 from importlib import reload
 

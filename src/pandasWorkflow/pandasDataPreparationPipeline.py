@@ -17,92 +17,40 @@ parentPath = '/'.join(sys.path[1].split('/')[:-2])
 
 logging.basicConfig(filename=parentPath+'/logging/dataPipelineLogging.log',level=logging.DEBUG)
 
-logging.info("########")
-logging.info(str(datetime.datetime.now()) + ': ' + "New Application Process")
-logging.info("########")
+dp.logStartOfDataPipeline()
 
 ########
 
-tic = time.perf_counter()
-
-df = pd.read_csv(parentPath+'/data/pd_dfExpediaSample.csv')
-
-toc = time.perf_counter()
-
-logging.info(str(datetime.datetime.now()) + ': ' + "Import CSV Time elapsed: "+ str(round(toc-tic, 3))+ " seconds")
+df = dp.importDataset(parentPath=parentPath, inputFilePath='/data/pd_dfExpediaSample.csv')
 
 ########
-
-tic = time.perf_counter()
 
 df = dp.updateIDFieldsToCategoricalFeatures(df)
 
-toc = time.perf_counter()
-
-logging.info(str(datetime.datetime.now()) + ': ' + "updateIDFieldsToCategoricalFeatures Time elapsed: "+ str(round(toc-tic, 3))+ " seconds")
-
 ########
-
-tic = time.perf_counter()
 
 df = dp.updateISFieldsToBooleanFeatures(df)
 
-toc = time.perf_counter()
-
-logging.info(str(datetime.datetime.now()) + ': ' + "updateISFieldsToBooleanFeatures Time elapsed: "+ str(round(toc-tic, 3))+ " seconds")
-
 ########
-
-tic = time.perf_counter()
 
 df = dp.removeHighCardinalityFeatures(df)
 
-toc = time.perf_counter()
-
-logging.info(str(datetime.datetime.now()) + ': ' + "removeHighCardinalityFeatures Time elapsed: "+ str(round(toc-tic, 3))+ " seconds")
-
 ########
-
-tic = time.perf_counter()
 
 df = dp.removeHighNULLCntFeatures(df)
 
-toc = time.perf_counter()
-
-logging.info(str(datetime.datetime.now()) + ': ' + "removeHighNULLCntFeatures Time elapsed: "+ str(round(toc-tic, 3))+ " seconds")
-
 ########
-
-tic = time.perf_counter()
 
 df = dp.removeRemainingRecordsWithNULLS(df)
 
-toc = time.perf_counter()
-
-logging.info(str(datetime.datetime.now()) + ': ' + "removeRemainingRecordsWithNULLS Time elapsed: "+ str(round(toc-tic, 3))+ " seconds")
-
 ########
-
-tic = time.perf_counter()
 
 df = dp.convertCategoricalVariablesToDummyVariables(df)
 
-toc = time.perf_counter()
+########
 
-logging.info(str(datetime.datetime.now()) + ': ' + "convertCategoricalVariablesToDummyVariables Time elapsed: "+ str(round(toc-tic, 3))+ " seconds")
+dp.exportDataset(df=df, outputPath='/data/pd_CleansedDataset.csv')
 
 ########
 
-tic = time.perf_counter()
-
-df.to_csv(parentPath+'/data/pd_CleansedDataset.csv', index=False)
-
-toc = time.perf_counter()
-
-logging.info(str(datetime.datetime.now()) + ': ' + "Export CSV Time elapsed: "+ str(round(toc-tic, 3))+ " seconds")
-
-########
-
-logging.info("########")
-logging.info(str(datetime.datetime.now()) + ': ' + "End of Application Process")
-logging.info("########")
+dp.logEndOfDataPipeline()
