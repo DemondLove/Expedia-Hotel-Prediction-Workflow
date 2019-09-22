@@ -17,13 +17,15 @@ parentPath = '/'.join(sys.path[1].split('/')[:-2])
 
 logging.basicConfig(filename=parentPath+'/logging/dataPipelineLogging.log',level=logging.DEBUG)
 
-print(parentPath)
+logging.info("########")
+logging.info(str(datetime.datetime.now()) + ': ' + "New Application Process")
+logging.info("########")
 
 ########
 
 tic = time.perf_counter()
 
-df = pd.read_csv(parentPath+'/data/pd___dfExpediaSample.csv')
+df = pd.read_csv(parentPath+'/data/pd_dfExpediaSample.csv')
 
 toc = time.perf_counter()
 
@@ -101,4 +103,6 @@ logging.info(str(datetime.datetime.now()) + ': ' + "Export CSV Time elapsed: "+ 
 
 ########
 
-print('dataPreparationPipeline Complete!')
+logging.info("########")
+logging.info(str(datetime.datetime.now()) + ': ' + "End of Application Process")
+logging.info("########")

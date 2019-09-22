@@ -20,7 +20,7 @@ def updateIDFieldsToCategoricalFeatures(df):
     df (pd.DataFrame): Converted dataFrame with the ID fields containing updated datatypes
     '''
     try:
-#         df['site_name'] = df['site_name'].astype('category')
+        df['site_name'] = df['site_name'].astype('category')
         df['posa_continent'] = df['posa_continent'].astype('category')
         df['user_location_country'] = df['user_location_country'].astype('category')
         df['channel'] = df['channel'].astype('category')
@@ -44,11 +44,14 @@ def updateISFieldsToBooleanFeatures(df):
     df (pd.DataFrame): Converted dataFrame with the boolean fields updated to the correct datatype
     '''
     
-    df['is_mobile'] = df['is_mobile'].astype('bool')
-    df['is_package'] = df['is_package'].astype('bool')
-    df['is_booking'] = df['is_booking'].astype('bool')
-    
-    return df
+    try:
+        df['is_mobile'] = df['is_mobile'].astype('bool')
+        df['is_package'] = df['is_package'].astype('bool')
+        df['is_booking'] = df['is_booking'].astype('bool')
+
+        return df
+    except Exception as e:
+        print(str(datetime.datetime.now()) + ': ' + 'An Error has Occured in updateIDFieldsToCategoricalFeatures: ' + str(e))
 
 def removeHighCardinalityFeatures(df):
     '''
@@ -87,9 +90,12 @@ def removeHighNULLCntFeatures(df):
     df (pd.DataFrame): Converted dataFrame with variables with a high NaN count
     '''
     
-    df.drop('orig_destination_distance', axis=1, inplace=True)
-    
-    return df
+    try:
+        df.drop('orig_destination_distance', axis=1, inplace=True)
+
+        return df
+    except Exception as e:
+        print(str(datetime.datetime.now()) + ': ' + 'An Error has Occured in updateIDFieldsToCategoricalFeatures: ' + str(e))
 
 def removeRemainingRecordsWithNULLS(df):
     '''
@@ -102,9 +108,12 @@ def removeRemainingRecordsWithNULLS(df):
     df (pd.DataFrame): Converted dataFrame with any rows containing a NULL value removed
     '''
     
-    df = df.dropna(axis=0, how='any', inplace=False)
-    
-    return df
+    try:
+        df = df.dropna(axis=0, how='any', inplace=False)
+
+        return df
+    except Exception as e:
+        print(str(datetime.datetime.now()) + ': ' + 'An Error has Occured in updateIDFieldsToCategoricalFeatures: ' + str(e))
 
 def convertCategoricalVariablesToDummyVariables(df):
     '''
@@ -117,10 +126,13 @@ def convertCategoricalVariablesToDummyVariables(df):
     df (pd.DataFrame): Converted dataFrame with categorical variables converted into dummy variables
     '''
     
-    dfcat = df.select_dtypes(exclude=[np.number])
+    try:
+        dfcat = df.select_dtypes(exclude=[np.number])
 
-    for x in dfcat:
-        df = df.join(pd.get_dummies(df[x], prefix=x))
-        df.drop(x, axis=1, inplace=True)
+        for x in dfcat:
+            df = df.join(pd.get_dummies(df[x], prefix=x))
+            df.drop(x, axis=1, inplace=True)
 
-    return df
+        return df
+    except Exception as e:
+        print(str(datetime.datetime.now()) + ': ' + 'An Error has Occured in updateIDFieldsToCategoricalFeatures: ' + str(e))
