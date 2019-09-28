@@ -10,7 +10,7 @@ import datetime
 
 parentPath = '/'.join(sys.path[1].split('/')[:-2])
 
-logging.basicConfig(filename=parentPath+'/logging/dataPipelineLogging.log',level=logging.DEBUG)
+logging.basicConfig(filename=parentPath+'/logs/dataPipelineLogging.log',level=logging.DEBUG)
 
 def updateIDFieldsToCategoricalFeatures(df):
     '''
