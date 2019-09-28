@@ -42,6 +42,6 @@ removeRemainingRecordsWithNULLS: Remove any remaining rows containing a NULL val
 
 convertCategoricalVariablesToDummyVariables: Convert categorical variables into dummy variables
 
-logEndOfDataPipeline: Export dataset into the Analytics Layer
+exportDataset: Export dataset into the Analytics Layer
 
 *Functions can be found in the src/pandasWorkflow/pandasDataPreparationUtils.py
