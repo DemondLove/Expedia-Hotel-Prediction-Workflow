@@ -26,8 +26,6 @@ Engagement Layer: AWS S3 Buckets - Parquet Files
 
 ## Data Preparation DAG
 
-Functions can be found in the src/pandasWorkflow/pandasDataPreparationUtils.py
-
 ![Icon](pandasWorkflowDAG.png)
 
 importDataset: Import dataset from Presistence Layer
@@ -45,3 +43,5 @@ removeRemainingRecordsWithNULLS: Remove any remaining rows containing a NULL val
 convertCategoricalVariablesToDummyVariables: Convert categorical variables into dummy variables
 
 logEndOfDataPipeline: Export dataset into the Analytics Layer
+
+*Functions can be found in the src/pandasWorkflow/pandasDataPreparationUtils.py
