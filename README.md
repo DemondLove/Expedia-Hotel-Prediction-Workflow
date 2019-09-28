@@ -30,16 +30,18 @@ Functions can be found in the src/pandasWorkflow/pandasDataPreparationUtils.py
 
 ![Icon](pandasWorkflowDAG.png)
 
-Import dataset from Presistence Layer
+importDataset: Import dataset from Presistence Layer
 
-updateIDFieldsToCategoricalFeatures
+updateIDFieldsToCategoricalFeatures: Update the ID fields to be categorical features
 
-removeHighCardinalityFeatures
+updateISFieldsToBooleanFeatures: Update the boolean fields to the correct datatype
 
-removeHighNULLCntFeatures
+removeHighCardinalityFeatures: Remove high cardinality categorical variables
 
-removeRemainingRecordsWithNULLS
+removeHighNULLCntFeatures: Remove feature with an abnormally high number of missing values
 
-convertCategoricalVariablesToDummyVariables
+removeRemainingRecordsWithNULLS: Remove any remaining rows containing a NULL value
 
-Export dataset into the Analytics Layer
+convertCategoricalVariablesToDummyVariables: Convert categorical variables into dummy variables
+
+logEndOfDataPipeline: Export dataset into the Analytics Layer
