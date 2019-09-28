@@ -1912,3 +1912,75 @@ WHERE dag.dag_id = ?
  LIMIT ? OFFSET ?]
 [parameters: ('divvy_dirty_money', 1, 0)]
 (Background on this error at: http://sqlalche.me/e/e3q8)
+[2019-09-28 18:11:23,175] {scheduler_job.py:146} INFO - Started process (PID=54208) to work on /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 18:11:23,183] {scheduler_job.py:1520} INFO - Processing file /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py for tasks to queue
+[2019-09-28 18:11:23,184] {logging_mixin.py:95} INFO - [2019-09-28 18:11:23,184] {dagbag.py:90} INFO - Filling up the DagBag from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 18:11:23,800] {logging_mixin.py:95} INFO - [2019-09-28 18:11:23,797] {dagbag.py:205} ERROR - Failed to import: /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/airflow/models/dagbag.py", line 202, in process_file
+    m = imp.load_source(mod_name, filepath)
+  File "/anaconda3/lib/python3.6/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 684, in _load
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py", line 17, in <module>
+    import src.pandasWorkflow.pandasDataPreparationUtils as dp
+ModuleNotFoundError: No module named 'src'
+[2019-09-28 18:11:23,800] {scheduler_job.py:1534} WARNING - No viable dags retrieved from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 18:11:23,807] {scheduler_job.py:152} INFO - Processing /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py took 0.632 seconds
+[2019-09-28 18:12:07,290] {scheduler_job.py:146} INFO - Started process (PID=54623) to work on /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 18:12:07,300] {scheduler_job.py:1520} INFO - Processing file /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py for tasks to queue
+[2019-09-28 18:12:07,301] {logging_mixin.py:95} INFO - [2019-09-28 18:12:07,301] {dagbag.py:90} INFO - Filling up the DagBag from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 18:12:08,272] {logging_mixin.py:95} INFO - [2019-09-28 18:12:08,269] {dagbag.py:205} ERROR - Failed to import: /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/airflow/models/dagbag.py", line 202, in process_file
+    m = imp.load_source(mod_name, filepath)
+  File "/anaconda3/lib/python3.6/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 684, in _load
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py", line 17, in <module>
+    import src.pandasWorkflow.pandasDataPreparationUtils as dp
+ModuleNotFoundError: No module named 'src'
+[2019-09-28 18:12:08,272] {scheduler_job.py:1534} WARNING - No viable dags retrieved from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 18:12:08,280] {scheduler_job.py:152} INFO - Processing /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py took 0.990 seconds
+[2019-09-28 18:12:51,409] {scheduler_job.py:146} INFO - Started process (PID=55034) to work on /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 18:12:51,417] {scheduler_job.py:1520} INFO - Processing file /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py for tasks to queue
+[2019-09-28 18:12:51,418] {logging_mixin.py:95} INFO - [2019-09-28 18:12:51,418] {dagbag.py:90} INFO - Filling up the DagBag from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 18:12:51,998] {logging_mixin.py:95} INFO - [2019-09-28 18:12:51,996] {dagbag.py:205} ERROR - Failed to import: /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/airflow/models/dagbag.py", line 202, in process_file
+    m = imp.load_source(mod_name, filepath)
+  File "/anaconda3/lib/python3.6/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 684, in _load
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py", line 17, in <module>
+    import src.pandasWorkflow.pandasDataPreparationUtils as dp
+ModuleNotFoundError: No module named 'src'
+[2019-09-28 18:12:51,998] {scheduler_job.py:1534} WARNING - No viable dags retrieved from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 18:12:52,005] {scheduler_job.py:152} INFO - Processing /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py took 0.596 seconds
+[2019-09-28 18:13:35,502] {scheduler_job.py:146} INFO - Started process (PID=55485) to work on /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 18:13:35,510] {scheduler_job.py:1520} INFO - Processing file /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py for tasks to queue
+[2019-09-28 18:13:35,511] {logging_mixin.py:95} INFO - [2019-09-28 18:13:35,511] {dagbag.py:90} INFO - Filling up the DagBag from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 18:13:36,038] {logging_mixin.py:95} INFO - [2019-09-28 18:13:36,037] {dagbag.py:205} ERROR - Failed to import: /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/airflow/models/dagbag.py", line 202, in process_file
+    m = imp.load_source(mod_name, filepath)
+  File "/anaconda3/lib/python3.6/imp.py", line 172, in load_source
+    module = _load(spec)
+  File "<frozen importlib._bootstrap>", line 684, in _load
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py", line 17, in <module>
+    import src.pandasWorkflow.pandasDataPreparationUtils as dp
+ModuleNotFoundError: No module named 'src'
+[2019-09-28 18:13:36,039] {scheduler_job.py:1534} WARNING - No viable dags retrieved from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 18:13:36,046] {scheduler_job.py:152} INFO - Processing /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py took 0.544 seconds

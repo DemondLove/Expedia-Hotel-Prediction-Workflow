@@ -1,0 +1,177 @@
+[2019-09-28 18:11:21,180] {dag_processing.py:806} INFO - Processing files using up to 1 processes at a time 
+[2019-09-28 18:11:21,181] {dag_processing.py:807} INFO - Process each file at most once every 0 seconds
+[2019-09-28 18:11:21,181] {dag_processing.py:809} INFO - Checking for new files in /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags every 300 seconds
+[2019-09-28 18:11:21,303] {dag_processing.py:1006} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                                                  PID    Runtime    Last Runtime    Last Run
+-------------------------------------------------------------------------------------------------------------------------  -----  ---------  --------------  -------------------
+/Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+/Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/.ipynb_checkpoints/pandasWorkflow DAG-checkpoint.py
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_python_operator.py
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/test_utils.py
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_bash_operator.py
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_branch_operator.py
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_docker_operator.py
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/tutorial.py
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/docker_copy_data.py
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_pig_operator.py
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_passing_params_via_test_command.py
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_xcom.py
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_http_operator.py
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_skip_dag.py
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_trigger_target_dag.py
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_subdag_operator.py
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_trigger_controller_dag.py
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/subdags/subdag.py
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_short_circuit_operator.py                                                0.11s           2019-09-28T23:11:21
+================================================================================
+[2019-09-28 18:11:51,358] {dag_processing.py:1006} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                                                  PID    Runtime    Last Runtime    Last Run
+-------------------------------------------------------------------------------------------------------------------------  -----  ---------  --------------  -------------------
+/Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/.ipynb_checkpoints/pandasWorkflow DAG-checkpoint.py
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_python_operator.py
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_passing_params_via_test_command.py
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_xcom.py
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_subdag_operator.py
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/subdags/subdag.py
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_http_operator.py                                                         0.10s           2019-09-28T23:11:27
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_skip_dag.py                                                              0.10s           2019-09-28T23:11:33
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/test_utils.py                                                                    0.10s           2019-09-28T23:11:47
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/tutorial.py                                                                      0.10s           2019-09-28T23:11:43
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_trigger_controller_dag.py                                                0.10s           2019-09-28T23:11:51
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_docker_operator.py                                                       0.10s           2019-09-28T23:11:25
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_trigger_target_dag.py                                                    0.10s           2019-09-28T23:11:35
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py                                              0.10s           2019-09-28T23:11:41
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_branch_operator.py                                                       0.10s           2019-09-28T23:11:49
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_short_circuit_operator.py                                                0.11s           2019-09-28T23:11:21
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_pig_operator.py                                                          0.11s           2019-09-28T23:11:29
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py                                                           0.11s           2019-09-28T23:11:45
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py                                          0.11s           2019-09-28T23:11:31
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_bash_operator.py                                                         0.11s           2019-09-28T23:11:39
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/docker_copy_data.py                                                              0.11s           2019-09-28T23:11:37
+/Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py                                                  0.71s           2019-09-28T23:11:23
+================================================================================
+[2019-09-28 18:12:21,429] {dag_processing.py:1006} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                                                  PID    Runtime    Last Runtime    Last Run
+-------------------------------------------------------------------------------------------------------------------------  -----  ---------  --------------  -------------------
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/docker_copy_data.py                                                              0.10s           2019-09-28T23:12:21
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_trigger_target_dag.py                                                    0.10s           2019-09-28T23:12:19
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_skip_dag.py                                                              0.10s           2019-09-28T23:12:17
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/test_utils.py                                                                    0.10s           2019-09-28T23:11:47
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/tutorial.py                                                                      0.10s           2019-09-28T23:11:43
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_pig_operator.py                                                          0.10s           2019-09-28T23:12:13
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py                                          0.10s           2019-09-28T23:12:15
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_trigger_controller_dag.py                                                0.10s           2019-09-28T23:11:51
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_short_circuit_operator.py                                                0.10s           2019-09-28T23:12:05
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_docker_operator.py                                                       0.10s           2019-09-28T23:12:09
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py                                              0.10s           2019-09-28T23:11:41
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/subdags/subdag.py                                                                0.10s           2019-09-28T23:11:57
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_passing_params_via_test_command.py                                       0.10s           2019-09-28T23:12:03
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_branch_operator.py                                                       0.10s           2019-09-28T23:11:49
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_python_operator.py                                                       0.11s           2019-09-28T23:11:53
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_subdag_operator.py                                                       0.11s           2019-09-28T23:12:01
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py                                                           0.11s           2019-09-28T23:11:45
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_bash_operator.py                                                         0.11s           2019-09-28T23:11:39
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_xcom.py                                                                  0.11s           2019-09-28T23:11:55
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_http_operator.py                                                         0.21s           2019-09-28T23:12:11
+/Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/.ipynb_checkpoints/pandasWorkflow DAG-checkpoint.py                    1.01s           2019-09-28T23:12:00
+/Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py                                                  1.02s           2019-09-28T23:12:08
+================================================================================
+[2019-09-28 18:12:52,114] {dag_processing.py:1006} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                                                  PID    Runtime    Last Runtime    Last Run
+-------------------------------------------------------------------------------------------------------------------------  -----  ---------  --------------  -------------------
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/docker_copy_data.py                                                              0.10s           2019-09-28T23:12:21
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_trigger_target_dag.py                                                    0.10s           2019-09-28T23:12:19
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_skip_dag.py                                                              0.10s           2019-09-28T23:12:17
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/tutorial.py                                                                      0.10s           2019-09-28T23:12:27
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_short_circuit_operator.py                                                0.10s           2019-09-28T23:12:49
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_passing_params_via_test_command.py                                       0.10s           2019-09-28T23:12:47
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_bash_operator.py                                                         0.10s           2019-09-28T23:12:23
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_pig_operator.py                                                          0.10s           2019-09-28T23:12:13
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py                                          0.10s           2019-09-28T23:12:15
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_docker_operator.py                                                       0.10s           2019-09-28T23:12:09
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_subdag_operator.py                                                       0.10s           2019-09-28T23:12:45
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py                                                           0.10s           2019-09-28T23:12:29
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_xcom.py                                                                  0.10s           2019-09-28T23:12:39
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/subdags/subdag.py                                                                0.11s           2019-09-28T23:12:41
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_trigger_controller_dag.py                                                0.11s           2019-09-28T23:12:35
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/test_utils.py                                                                    0.11s           2019-09-28T23:12:31
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_branch_operator.py                                                       0.11s           2019-09-28T23:12:33
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py                                              0.20s           2019-09-28T23:12:25
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_http_operator.py                                                         0.21s           2019-09-28T23:12:11
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_python_operator.py                                                       0.21s           2019-09-28T23:12:37
+/Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py                                                  0.71s           2019-09-28T23:12:52
+/Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/.ipynb_checkpoints/pandasWorkflow DAG-checkpoint.py                    1.02s           2019-09-28T23:12:44
+================================================================================
+[2019-09-28 18:13:23,579] {dag_processing.py:1006} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                                                  PID    Runtime    Last Runtime    Last Run
+-------------------------------------------------------------------------------------------------------------------------  -----  ---------  --------------  -------------------
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_short_circuit_operator.py                                                0.10s           2019-09-28T23:12:49
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py                                              0.10s           2019-09-28T23:13:09
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py                                                           0.10s           2019-09-28T23:13:13
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py                                          0.10s           2019-09-28T23:12:59
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_docker_operator.py                                                       0.10s           2019-09-28T23:12:53
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_passing_params_via_test_command.py                                       0.10s           2019-09-28T23:12:47
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_python_operator.py                                                       0.10s           2019-09-28T23:13:21
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_bash_operator.py                                                         0.10s           2019-09-28T23:13:07
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_http_operator.py                                                         0.10s           2019-09-28T23:12:55
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_subdag_operator.py                                                       0.10s           2019-09-28T23:12:45
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_skip_dag.py                                                              0.10s           2019-09-28T23:13:01
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_trigger_controller_dag.py                                                0.10s           2019-09-28T23:13:19
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/test_utils.py                                                                    0.10s           2019-09-28T23:13:15
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_branch_operator.py                                                       0.10s           2019-09-28T23:13:17
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/tutorial.py                                                                      0.10s           2019-09-28T23:13:11
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/subdags/subdag.py                                                                0.11s           2019-09-28T23:12:41
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_xcom.py                                                                  0.11s           2019-09-28T23:13:23
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/docker_copy_data.py                                                              0.11s           2019-09-28T23:13:05
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_trigger_target_dag.py                                                    0.11s           2019-09-28T23:13:03
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_pig_operator.py                                                          0.11s           2019-09-28T23:12:57
+/Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py                                                  0.71s           2019-09-28T23:12:52
+/Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/.ipynb_checkpoints/pandasWorkflow DAG-checkpoint.py                    1.02s           2019-09-28T23:12:44
+================================================================================
+[2019-09-28 18:13:53,650] {dag_processing.py:1006} INFO - 
+================================================================================
+DAG File Processing Stats
+
+File Path                                                                                                                  PID    Runtime    Last Runtime    Last Run
+-------------------------------------------------------------------------------------------------------------------------  -----  ---------  --------------  -------------------
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_http_operator.py                                                         0.10s           2019-09-28T23:13:39
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_pig_operator.py                                                          0.10s           2019-09-28T23:13:41
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/subdags/subdag.py                                                                0.10s           2019-09-28T23:13:25
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/docker_copy_data.py                                                              0.10s           2019-09-28T23:13:49
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_latest_only.py                                                           0.10s           2019-09-28T23:13:13
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_short_circuit_operator.py                                                0.10s           2019-09-28T23:13:33
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_trigger_target_dag.py                                                    0.10s           2019-09-28T23:13:47
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_subdag_operator.py                                                       0.10s           2019-09-28T23:13:29
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_passing_params_via_test_command.py                                       0.10s           2019-09-28T23:13:31
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_python_operator.py                                                       0.10s           2019-09-28T23:13:21
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_branch_python_dop_operator_3.py                                          0.10s           2019-09-28T23:13:43
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_trigger_controller_dag.py                                                0.10s           2019-09-28T23:13:19
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_docker_operator.py                                                       0.10s           2019-09-28T23:13:37
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/test_utils.py                                                                    0.10s           2019-09-28T23:13:15
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_branch_operator.py                                                       0.10s           2019-09-28T23:13:17
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/tutorial.py                                                                      0.10s           2019-09-28T23:13:11
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_latest_only_with_trigger.py                                              0.10s           2019-09-28T23:13:53
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_xcom.py                                                                  0.11s           2019-09-28T23:13:23
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_skip_dag.py                                                              0.11s           2019-09-28T23:13:45
+/anaconda3/lib/python3.6/site-packages/airflow/example_dags/example_bash_operator.py                                                         0.11s           2019-09-28T23:13:51
+/Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/.ipynb_checkpoints/pandasWorkflow DAG-checkpoint.py                    0.61s           2019-09-28T23:13:28
+/Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py                                                  0.61s           2019-09-28T23:13:36
+================================================================================
