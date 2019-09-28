@@ -31,9 +31,15 @@ Functions can be found in the src/pandasWorkflow/pandasDataPreparationUtils.py
 ![Icon](pandasWorkflowDAG.png)
 
 Import dataset from Presistence Layer
+
 updateIDFieldsToCategoricalFeatures
+
 removeHighCardinalityFeatures
+
 removeHighNULLCntFeatures
+
 removeRemainingRecordsWithNULLS
+
 convertCategoricalVariablesToDummyVariables
+
 Export dataset into the Analytics Layer
