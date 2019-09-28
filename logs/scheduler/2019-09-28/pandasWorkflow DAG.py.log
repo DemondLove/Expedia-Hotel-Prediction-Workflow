@@ -1,0 +1,1914 @@
+[2019-09-28 12:57:13,449] {scheduler_job.py:146} INFO - Started process (PID=94508) to work on /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 12:57:13,456] {scheduler_job.py:1520} INFO - Processing file /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py for tasks to queue
+[2019-09-28 12:57:13,457] {logging_mixin.py:95} INFO - [2019-09-28 12:57:13,456] {dagbag.py:90} INFO - Filling up the DagBag from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 12:57:13,468] {scheduler_job.py:1532} INFO - DAG(s) dict_keys(['divvy_dirty_money']) retrieved from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 12:57:13,476] {scheduler_job.py:156} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: dag
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 148, in _run_file_processor
+    result = scheduler_job.process_file(file_path, pickle_dags)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 1540, in process_file
+    dag.sync_to_db()
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/models/dag.py", line 1318, in sync_to_db
+    DagModel).filter(DagModel.dag_id == self.dag_id).first()
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3232, in first
+    ret = list(self[0:1])
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3018, in __getitem__
+    return list(res)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3334, in __iter__
+    return self._execute_and_instances(context)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3359, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1253, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1473, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: dag
+[SQL: SELECT dag.dag_id AS dag_dag_id, dag.is_paused AS dag_is_paused, dag.is_subdag AS dag_is_subdag, dag.is_active AS dag_is_active, dag.last_scheduler_run AS dag_last_scheduler_run, dag.last_pickled AS dag_last_pickled, dag.last_expired AS dag_last_expired, dag.scheduler_lock AS dag_scheduler_lock, dag.pickle_id AS dag_pickle_id, dag.fileloc AS dag_fileloc, dag.owners AS dag_owners, dag.description AS dag_description, dag.default_view AS dag_default_view, dag.schedule_interval AS dag_schedule_interval 
+FROM dag 
+WHERE dag.dag_id = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('divvy_dirty_money', 1, 0)]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+[2019-09-28 12:57:55,579] {scheduler_job.py:146} INFO - Started process (PID=94911) to work on /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 12:57:55,609] {scheduler_job.py:1520} INFO - Processing file /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py for tasks to queue
+[2019-09-28 12:57:55,610] {logging_mixin.py:95} INFO - [2019-09-28 12:57:55,610] {dagbag.py:90} INFO - Filling up the DagBag from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 12:57:55,624] {scheduler_job.py:1532} INFO - DAG(s) dict_keys(['divvy_dirty_money']) retrieved from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 12:57:55,634] {scheduler_job.py:156} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: dag
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 148, in _run_file_processor
+    result = scheduler_job.process_file(file_path, pickle_dags)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 1540, in process_file
+    dag.sync_to_db()
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/models/dag.py", line 1318, in sync_to_db
+    DagModel).filter(DagModel.dag_id == self.dag_id).first()
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3232, in first
+    ret = list(self[0:1])
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3018, in __getitem__
+    return list(res)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3334, in __iter__
+    return self._execute_and_instances(context)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3359, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1253, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1473, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: dag
+[SQL: SELECT dag.dag_id AS dag_dag_id, dag.is_paused AS dag_is_paused, dag.is_subdag AS dag_is_subdag, dag.is_active AS dag_is_active, dag.last_scheduler_run AS dag_last_scheduler_run, dag.last_pickled AS dag_last_pickled, dag.last_expired AS dag_last_expired, dag.scheduler_lock AS dag_scheduler_lock, dag.pickle_id AS dag_pickle_id, dag.fileloc AS dag_fileloc, dag.owners AS dag_owners, dag.description AS dag_description, dag.default_view AS dag_default_view, dag.schedule_interval AS dag_schedule_interval 
+FROM dag 
+WHERE dag.dag_id = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('divvy_dirty_money', 1, 0)]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+[2019-09-28 12:58:37,697] {scheduler_job.py:146} INFO - Started process (PID=95310) to work on /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 12:58:37,707] {scheduler_job.py:1520} INFO - Processing file /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py for tasks to queue
+[2019-09-28 12:58:37,708] {logging_mixin.py:95} INFO - [2019-09-28 12:58:37,707] {dagbag.py:90} INFO - Filling up the DagBag from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 12:58:37,719] {scheduler_job.py:1532} INFO - DAG(s) dict_keys(['divvy_dirty_money']) retrieved from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 12:58:37,728] {scheduler_job.py:156} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: dag
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 148, in _run_file_processor
+    result = scheduler_job.process_file(file_path, pickle_dags)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 1540, in process_file
+    dag.sync_to_db()
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/models/dag.py", line 1318, in sync_to_db
+    DagModel).filter(DagModel.dag_id == self.dag_id).first()
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3232, in first
+    ret = list(self[0:1])
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3018, in __getitem__
+    return list(res)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3334, in __iter__
+    return self._execute_and_instances(context)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3359, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1253, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1473, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: dag
+[SQL: SELECT dag.dag_id AS dag_dag_id, dag.is_paused AS dag_is_paused, dag.is_subdag AS dag_is_subdag, dag.is_active AS dag_is_active, dag.last_scheduler_run AS dag_last_scheduler_run, dag.last_pickled AS dag_last_pickled, dag.last_expired AS dag_last_expired, dag.scheduler_lock AS dag_scheduler_lock, dag.pickle_id AS dag_pickle_id, dag.fileloc AS dag_fileloc, dag.owners AS dag_owners, dag.description AS dag_description, dag.default_view AS dag_default_view, dag.schedule_interval AS dag_schedule_interval 
+FROM dag 
+WHERE dag.dag_id = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('divvy_dirty_money', 1, 0)]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+[2019-09-28 12:59:19,809] {scheduler_job.py:146} INFO - Started process (PID=95727) to work on /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 12:59:19,817] {scheduler_job.py:1520} INFO - Processing file /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py for tasks to queue
+[2019-09-28 12:59:19,818] {logging_mixin.py:95} INFO - [2019-09-28 12:59:19,817] {dagbag.py:90} INFO - Filling up the DagBag from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 12:59:19,829] {scheduler_job.py:1532} INFO - DAG(s) dict_keys(['divvy_dirty_money']) retrieved from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 12:59:19,838] {scheduler_job.py:156} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: dag
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 148, in _run_file_processor
+    result = scheduler_job.process_file(file_path, pickle_dags)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 1540, in process_file
+    dag.sync_to_db()
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/models/dag.py", line 1318, in sync_to_db
+    DagModel).filter(DagModel.dag_id == self.dag_id).first()
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3232, in first
+    ret = list(self[0:1])
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3018, in __getitem__
+    return list(res)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3334, in __iter__
+    return self._execute_and_instances(context)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3359, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1253, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1473, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: dag
+[SQL: SELECT dag.dag_id AS dag_dag_id, dag.is_paused AS dag_is_paused, dag.is_subdag AS dag_is_subdag, dag.is_active AS dag_is_active, dag.last_scheduler_run AS dag_last_scheduler_run, dag.last_pickled AS dag_last_pickled, dag.last_expired AS dag_last_expired, dag.scheduler_lock AS dag_scheduler_lock, dag.pickle_id AS dag_pickle_id, dag.fileloc AS dag_fileloc, dag.owners AS dag_owners, dag.description AS dag_description, dag.default_view AS dag_default_view, dag.schedule_interval AS dag_schedule_interval 
+FROM dag 
+WHERE dag.dag_id = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('divvy_dirty_money', 1, 0)]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+[2019-09-28 13:00:01,923] {scheduler_job.py:146} INFO - Started process (PID=96127) to work on /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:00:01,930] {scheduler_job.py:1520} INFO - Processing file /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py for tasks to queue
+[2019-09-28 13:00:01,931] {logging_mixin.py:95} INFO - [2019-09-28 13:00:01,931] {dagbag.py:90} INFO - Filling up the DagBag from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:00:01,942] {scheduler_job.py:1532} INFO - DAG(s) dict_keys(['divvy_dirty_money']) retrieved from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:00:01,951] {scheduler_job.py:156} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: dag
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 148, in _run_file_processor
+    result = scheduler_job.process_file(file_path, pickle_dags)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 1540, in process_file
+    dag.sync_to_db()
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/models/dag.py", line 1318, in sync_to_db
+    DagModel).filter(DagModel.dag_id == self.dag_id).first()
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3232, in first
+    ret = list(self[0:1])
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3018, in __getitem__
+    return list(res)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3334, in __iter__
+    return self._execute_and_instances(context)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3359, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1253, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1473, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: dag
+[SQL: SELECT dag.dag_id AS dag_dag_id, dag.is_paused AS dag_is_paused, dag.is_subdag AS dag_is_subdag, dag.is_active AS dag_is_active, dag.last_scheduler_run AS dag_last_scheduler_run, dag.last_pickled AS dag_last_pickled, dag.last_expired AS dag_last_expired, dag.scheduler_lock AS dag_scheduler_lock, dag.pickle_id AS dag_pickle_id, dag.fileloc AS dag_fileloc, dag.owners AS dag_owners, dag.description AS dag_description, dag.default_view AS dag_default_view, dag.schedule_interval AS dag_schedule_interval 
+FROM dag 
+WHERE dag.dag_id = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('divvy_dirty_money', 1, 0)]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+[2019-09-28 13:00:44,043] {scheduler_job.py:146} INFO - Started process (PID=96526) to work on /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:00:44,050] {scheduler_job.py:1520} INFO - Processing file /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py for tasks to queue
+[2019-09-28 13:00:44,051] {logging_mixin.py:95} INFO - [2019-09-28 13:00:44,051] {dagbag.py:90} INFO - Filling up the DagBag from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:00:44,061] {scheduler_job.py:1532} INFO - DAG(s) dict_keys(['divvy_dirty_money']) retrieved from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:00:44,070] {scheduler_job.py:156} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: dag
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 148, in _run_file_processor
+    result = scheduler_job.process_file(file_path, pickle_dags)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 1540, in process_file
+    dag.sync_to_db()
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/models/dag.py", line 1318, in sync_to_db
+    DagModel).filter(DagModel.dag_id == self.dag_id).first()
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3232, in first
+    ret = list(self[0:1])
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3018, in __getitem__
+    return list(res)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3334, in __iter__
+    return self._execute_and_instances(context)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3359, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1253, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1473, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: dag
+[SQL: SELECT dag.dag_id AS dag_dag_id, dag.is_paused AS dag_is_paused, dag.is_subdag AS dag_is_subdag, dag.is_active AS dag_is_active, dag.last_scheduler_run AS dag_last_scheduler_run, dag.last_pickled AS dag_last_pickled, dag.last_expired AS dag_last_expired, dag.scheduler_lock AS dag_scheduler_lock, dag.pickle_id AS dag_pickle_id, dag.fileloc AS dag_fileloc, dag.owners AS dag_owners, dag.description AS dag_description, dag.default_view AS dag_default_view, dag.schedule_interval AS dag_schedule_interval 
+FROM dag 
+WHERE dag.dag_id = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('divvy_dirty_money', 1, 0)]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+[2019-09-28 13:01:26,178] {scheduler_job.py:146} INFO - Started process (PID=96927) to work on /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:01:26,186] {scheduler_job.py:1520} INFO - Processing file /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py for tasks to queue
+[2019-09-28 13:01:26,187] {logging_mixin.py:95} INFO - [2019-09-28 13:01:26,187] {dagbag.py:90} INFO - Filling up the DagBag from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:01:26,197] {scheduler_job.py:1532} INFO - DAG(s) dict_keys(['divvy_dirty_money']) retrieved from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:01:26,207] {scheduler_job.py:156} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: dag
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 148, in _run_file_processor
+    result = scheduler_job.process_file(file_path, pickle_dags)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 1540, in process_file
+    dag.sync_to_db()
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/models/dag.py", line 1318, in sync_to_db
+    DagModel).filter(DagModel.dag_id == self.dag_id).first()
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3232, in first
+    ret = list(self[0:1])
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3018, in __getitem__
+    return list(res)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3334, in __iter__
+    return self._execute_and_instances(context)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3359, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1253, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1473, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: dag
+[SQL: SELECT dag.dag_id AS dag_dag_id, dag.is_paused AS dag_is_paused, dag.is_subdag AS dag_is_subdag, dag.is_active AS dag_is_active, dag.last_scheduler_run AS dag_last_scheduler_run, dag.last_pickled AS dag_last_pickled, dag.last_expired AS dag_last_expired, dag.scheduler_lock AS dag_scheduler_lock, dag.pickle_id AS dag_pickle_id, dag.fileloc AS dag_fileloc, dag.owners AS dag_owners, dag.description AS dag_description, dag.default_view AS dag_default_view, dag.schedule_interval AS dag_schedule_interval 
+FROM dag 
+WHERE dag.dag_id = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('divvy_dirty_money', 1, 0)]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+[2019-09-28 13:02:08,302] {scheduler_job.py:146} INFO - Started process (PID=97325) to work on /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:02:08,309] {scheduler_job.py:1520} INFO - Processing file /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py for tasks to queue
+[2019-09-28 13:02:08,310] {logging_mixin.py:95} INFO - [2019-09-28 13:02:08,310] {dagbag.py:90} INFO - Filling up the DagBag from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:02:08,323] {scheduler_job.py:1532} INFO - DAG(s) dict_keys(['divvy_dirty_money']) retrieved from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:02:08,331] {scheduler_job.py:156} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: dag
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 148, in _run_file_processor
+    result = scheduler_job.process_file(file_path, pickle_dags)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 1540, in process_file
+    dag.sync_to_db()
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/models/dag.py", line 1318, in sync_to_db
+    DagModel).filter(DagModel.dag_id == self.dag_id).first()
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3232, in first
+    ret = list(self[0:1])
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3018, in __getitem__
+    return list(res)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3334, in __iter__
+    return self._execute_and_instances(context)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3359, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1253, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1473, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: dag
+[SQL: SELECT dag.dag_id AS dag_dag_id, dag.is_paused AS dag_is_paused, dag.is_subdag AS dag_is_subdag, dag.is_active AS dag_is_active, dag.last_scheduler_run AS dag_last_scheduler_run, dag.last_pickled AS dag_last_pickled, dag.last_expired AS dag_last_expired, dag.scheduler_lock AS dag_scheduler_lock, dag.pickle_id AS dag_pickle_id, dag.fileloc AS dag_fileloc, dag.owners AS dag_owners, dag.description AS dag_description, dag.default_view AS dag_default_view, dag.schedule_interval AS dag_schedule_interval 
+FROM dag 
+WHERE dag.dag_id = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('divvy_dirty_money', 1, 0)]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+[2019-09-28 13:02:50,399] {scheduler_job.py:146} INFO - Started process (PID=97724) to work on /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:02:50,407] {scheduler_job.py:1520} INFO - Processing file /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py for tasks to queue
+[2019-09-28 13:02:50,408] {logging_mixin.py:95} INFO - [2019-09-28 13:02:50,408] {dagbag.py:90} INFO - Filling up the DagBag from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:02:50,420] {scheduler_job.py:1532} INFO - DAG(s) dict_keys(['divvy_dirty_money']) retrieved from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:02:50,429] {scheduler_job.py:156} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: dag
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 148, in _run_file_processor
+    result = scheduler_job.process_file(file_path, pickle_dags)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 1540, in process_file
+    dag.sync_to_db()
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/models/dag.py", line 1318, in sync_to_db
+    DagModel).filter(DagModel.dag_id == self.dag_id).first()
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3232, in first
+    ret = list(self[0:1])
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3018, in __getitem__
+    return list(res)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3334, in __iter__
+    return self._execute_and_instances(context)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3359, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1253, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1473, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: dag
+[SQL: SELECT dag.dag_id AS dag_dag_id, dag.is_paused AS dag_is_paused, dag.is_subdag AS dag_is_subdag, dag.is_active AS dag_is_active, dag.last_scheduler_run AS dag_last_scheduler_run, dag.last_pickled AS dag_last_pickled, dag.last_expired AS dag_last_expired, dag.scheduler_lock AS dag_scheduler_lock, dag.pickle_id AS dag_pickle_id, dag.fileloc AS dag_fileloc, dag.owners AS dag_owners, dag.description AS dag_description, dag.default_view AS dag_default_view, dag.schedule_interval AS dag_schedule_interval 
+FROM dag 
+WHERE dag.dag_id = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('divvy_dirty_money', 1, 0)]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+[2019-09-28 13:03:32,520] {scheduler_job.py:146} INFO - Started process (PID=98124) to work on /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:03:32,531] {scheduler_job.py:1520} INFO - Processing file /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py for tasks to queue
+[2019-09-28 13:03:32,532] {logging_mixin.py:95} INFO - [2019-09-28 13:03:32,532] {dagbag.py:90} INFO - Filling up the DagBag from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:03:32,547] {scheduler_job.py:1532} INFO - DAG(s) dict_keys(['divvy_dirty_money']) retrieved from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:03:32,556] {scheduler_job.py:156} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: dag
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 148, in _run_file_processor
+    result = scheduler_job.process_file(file_path, pickle_dags)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 1540, in process_file
+    dag.sync_to_db()
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/models/dag.py", line 1318, in sync_to_db
+    DagModel).filter(DagModel.dag_id == self.dag_id).first()
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3232, in first
+    ret = list(self[0:1])
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3018, in __getitem__
+    return list(res)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3334, in __iter__
+    return self._execute_and_instances(context)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3359, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1253, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1473, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: dag
+[SQL: SELECT dag.dag_id AS dag_dag_id, dag.is_paused AS dag_is_paused, dag.is_subdag AS dag_is_subdag, dag.is_active AS dag_is_active, dag.last_scheduler_run AS dag_last_scheduler_run, dag.last_pickled AS dag_last_pickled, dag.last_expired AS dag_last_expired, dag.scheduler_lock AS dag_scheduler_lock, dag.pickle_id AS dag_pickle_id, dag.fileloc AS dag_fileloc, dag.owners AS dag_owners, dag.description AS dag_description, dag.default_view AS dag_default_view, dag.schedule_interval AS dag_schedule_interval 
+FROM dag 
+WHERE dag.dag_id = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('divvy_dirty_money', 1, 0)]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+[2019-09-28 13:04:14,660] {scheduler_job.py:146} INFO - Started process (PID=98632) to work on /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:04:14,668] {scheduler_job.py:1520} INFO - Processing file /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py for tasks to queue
+[2019-09-28 13:04:14,669] {logging_mixin.py:95} INFO - [2019-09-28 13:04:14,669] {dagbag.py:90} INFO - Filling up the DagBag from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:04:14,682] {scheduler_job.py:1532} INFO - DAG(s) dict_keys(['divvy_dirty_money']) retrieved from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:04:14,691] {scheduler_job.py:156} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: dag
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 148, in _run_file_processor
+    result = scheduler_job.process_file(file_path, pickle_dags)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 1540, in process_file
+    dag.sync_to_db()
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/models/dag.py", line 1318, in sync_to_db
+    DagModel).filter(DagModel.dag_id == self.dag_id).first()
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3232, in first
+    ret = list(self[0:1])
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3018, in __getitem__
+    return list(res)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3334, in __iter__
+    return self._execute_and_instances(context)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3359, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1253, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1473, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: dag
+[SQL: SELECT dag.dag_id AS dag_dag_id, dag.is_paused AS dag_is_paused, dag.is_subdag AS dag_is_subdag, dag.is_active AS dag_is_active, dag.last_scheduler_run AS dag_last_scheduler_run, dag.last_pickled AS dag_last_pickled, dag.last_expired AS dag_last_expired, dag.scheduler_lock AS dag_scheduler_lock, dag.pickle_id AS dag_pickle_id, dag.fileloc AS dag_fileloc, dag.owners AS dag_owners, dag.description AS dag_description, dag.default_view AS dag_default_view, dag.schedule_interval AS dag_schedule_interval 
+FROM dag 
+WHERE dag.dag_id = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('divvy_dirty_money', 1, 0)]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+[2019-09-28 13:04:56,918] {scheduler_job.py:146} INFO - Started process (PID=99034) to work on /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:04:56,926] {scheduler_job.py:1520} INFO - Processing file /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py for tasks to queue
+[2019-09-28 13:04:56,927] {logging_mixin.py:95} INFO - [2019-09-28 13:04:56,926] {dagbag.py:90} INFO - Filling up the DagBag from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:04:56,939] {scheduler_job.py:1532} INFO - DAG(s) dict_keys(['divvy_dirty_money']) retrieved from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:04:56,948] {scheduler_job.py:156} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: dag
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 148, in _run_file_processor
+    result = scheduler_job.process_file(file_path, pickle_dags)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 1540, in process_file
+    dag.sync_to_db()
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/models/dag.py", line 1318, in sync_to_db
+    DagModel).filter(DagModel.dag_id == self.dag_id).first()
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3232, in first
+    ret = list(self[0:1])
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3018, in __getitem__
+    return list(res)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3334, in __iter__
+    return self._execute_and_instances(context)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3359, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1253, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1473, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: dag
+[SQL: SELECT dag.dag_id AS dag_dag_id, dag.is_paused AS dag_is_paused, dag.is_subdag AS dag_is_subdag, dag.is_active AS dag_is_active, dag.last_scheduler_run AS dag_last_scheduler_run, dag.last_pickled AS dag_last_pickled, dag.last_expired AS dag_last_expired, dag.scheduler_lock AS dag_scheduler_lock, dag.pickle_id AS dag_pickle_id, dag.fileloc AS dag_fileloc, dag.owners AS dag_owners, dag.description AS dag_description, dag.default_view AS dag_default_view, dag.schedule_interval AS dag_schedule_interval 
+FROM dag 
+WHERE dag.dag_id = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('divvy_dirty_money', 1, 0)]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+[2019-09-28 13:05:39,183] {scheduler_job.py:146} INFO - Started process (PID=99436) to work on /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:05:39,190] {scheduler_job.py:1520} INFO - Processing file /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py for tasks to queue
+[2019-09-28 13:05:39,191] {logging_mixin.py:95} INFO - [2019-09-28 13:05:39,191] {dagbag.py:90} INFO - Filling up the DagBag from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:05:39,203] {scheduler_job.py:1532} INFO - DAG(s) dict_keys(['divvy_dirty_money']) retrieved from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:05:39,212] {scheduler_job.py:156} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: dag
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 148, in _run_file_processor
+    result = scheduler_job.process_file(file_path, pickle_dags)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 1540, in process_file
+    dag.sync_to_db()
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/models/dag.py", line 1318, in sync_to_db
+    DagModel).filter(DagModel.dag_id == self.dag_id).first()
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3232, in first
+    ret = list(self[0:1])
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3018, in __getitem__
+    return list(res)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3334, in __iter__
+    return self._execute_and_instances(context)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3359, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1253, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1473, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: dag
+[SQL: SELECT dag.dag_id AS dag_dag_id, dag.is_paused AS dag_is_paused, dag.is_subdag AS dag_is_subdag, dag.is_active AS dag_is_active, dag.last_scheduler_run AS dag_last_scheduler_run, dag.last_pickled AS dag_last_pickled, dag.last_expired AS dag_last_expired, dag.scheduler_lock AS dag_scheduler_lock, dag.pickle_id AS dag_pickle_id, dag.fileloc AS dag_fileloc, dag.owners AS dag_owners, dag.description AS dag_description, dag.default_view AS dag_default_view, dag.schedule_interval AS dag_schedule_interval 
+FROM dag 
+WHERE dag.dag_id = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('divvy_dirty_money', 1, 0)]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+[2019-09-28 13:06:21,440] {scheduler_job.py:146} INFO - Started process (PID=99837) to work on /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:06:21,447] {scheduler_job.py:1520} INFO - Processing file /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py for tasks to queue
+[2019-09-28 13:06:21,448] {logging_mixin.py:95} INFO - [2019-09-28 13:06:21,448] {dagbag.py:90} INFO - Filling up the DagBag from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:06:21,461] {scheduler_job.py:1532} INFO - DAG(s) dict_keys(['divvy_dirty_money']) retrieved from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:06:21,470] {scheduler_job.py:156} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: dag
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 148, in _run_file_processor
+    result = scheduler_job.process_file(file_path, pickle_dags)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 1540, in process_file
+    dag.sync_to_db()
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/models/dag.py", line 1318, in sync_to_db
+    DagModel).filter(DagModel.dag_id == self.dag_id).first()
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3232, in first
+    ret = list(self[0:1])
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3018, in __getitem__
+    return list(res)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3334, in __iter__
+    return self._execute_and_instances(context)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3359, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1253, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1473, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: dag
+[SQL: SELECT dag.dag_id AS dag_dag_id, dag.is_paused AS dag_is_paused, dag.is_subdag AS dag_is_subdag, dag.is_active AS dag_is_active, dag.last_scheduler_run AS dag_last_scheduler_run, dag.last_pickled AS dag_last_pickled, dag.last_expired AS dag_last_expired, dag.scheduler_lock AS dag_scheduler_lock, dag.pickle_id AS dag_pickle_id, dag.fileloc AS dag_fileloc, dag.owners AS dag_owners, dag.description AS dag_description, dag.default_view AS dag_default_view, dag.schedule_interval AS dag_schedule_interval 
+FROM dag 
+WHERE dag.dag_id = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('divvy_dirty_money', 1, 0)]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+[2019-09-28 13:07:03,707] {scheduler_job.py:146} INFO - Started process (PID=537) to work on /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:07:03,714] {scheduler_job.py:1520} INFO - Processing file /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py for tasks to queue
+[2019-09-28 13:07:03,715] {logging_mixin.py:95} INFO - [2019-09-28 13:07:03,714] {dagbag.py:90} INFO - Filling up the DagBag from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:07:03,727] {scheduler_job.py:1532} INFO - DAG(s) dict_keys(['divvy_dirty_money']) retrieved from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:07:03,736] {scheduler_job.py:156} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: dag
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 148, in _run_file_processor
+    result = scheduler_job.process_file(file_path, pickle_dags)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 1540, in process_file
+    dag.sync_to_db()
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/models/dag.py", line 1318, in sync_to_db
+    DagModel).filter(DagModel.dag_id == self.dag_id).first()
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3232, in first
+    ret = list(self[0:1])
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3018, in __getitem__
+    return list(res)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3334, in __iter__
+    return self._execute_and_instances(context)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3359, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1253, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1473, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: dag
+[SQL: SELECT dag.dag_id AS dag_dag_id, dag.is_paused AS dag_is_paused, dag.is_subdag AS dag_is_subdag, dag.is_active AS dag_is_active, dag.last_scheduler_run AS dag_last_scheduler_run, dag.last_pickled AS dag_last_pickled, dag.last_expired AS dag_last_expired, dag.scheduler_lock AS dag_scheduler_lock, dag.pickle_id AS dag_pickle_id, dag.fileloc AS dag_fileloc, dag.owners AS dag_owners, dag.description AS dag_description, dag.default_view AS dag_default_view, dag.schedule_interval AS dag_schedule_interval 
+FROM dag 
+WHERE dag.dag_id = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('divvy_dirty_money', 1, 0)]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+[2019-09-28 13:07:45,936] {scheduler_job.py:146} INFO - Started process (PID=1004) to work on /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:07:45,943] {scheduler_job.py:1520} INFO - Processing file /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py for tasks to queue
+[2019-09-28 13:07:45,944] {logging_mixin.py:95} INFO - [2019-09-28 13:07:45,944] {dagbag.py:90} INFO - Filling up the DagBag from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:07:45,957] {scheduler_job.py:1532} INFO - DAG(s) dict_keys(['divvy_dirty_money']) retrieved from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:07:45,965] {scheduler_job.py:156} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: dag
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 148, in _run_file_processor
+    result = scheduler_job.process_file(file_path, pickle_dags)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 1540, in process_file
+    dag.sync_to_db()
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/models/dag.py", line 1318, in sync_to_db
+    DagModel).filter(DagModel.dag_id == self.dag_id).first()
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3232, in first
+    ret = list(self[0:1])
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3018, in __getitem__
+    return list(res)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3334, in __iter__
+    return self._execute_and_instances(context)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3359, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1253, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1473, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: dag
+[SQL: SELECT dag.dag_id AS dag_dag_id, dag.is_paused AS dag_is_paused, dag.is_subdag AS dag_is_subdag, dag.is_active AS dag_is_active, dag.last_scheduler_run AS dag_last_scheduler_run, dag.last_pickled AS dag_last_pickled, dag.last_expired AS dag_last_expired, dag.scheduler_lock AS dag_scheduler_lock, dag.pickle_id AS dag_pickle_id, dag.fileloc AS dag_fileloc, dag.owners AS dag_owners, dag.description AS dag_description, dag.default_view AS dag_default_view, dag.schedule_interval AS dag_schedule_interval 
+FROM dag 
+WHERE dag.dag_id = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('divvy_dirty_money', 1, 0)]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+[2019-09-28 13:08:28,170] {scheduler_job.py:146} INFO - Started process (PID=1408) to work on /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:08:28,179] {scheduler_job.py:1520} INFO - Processing file /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py for tasks to queue
+[2019-09-28 13:08:28,180] {logging_mixin.py:95} INFO - [2019-09-28 13:08:28,180] {dagbag.py:90} INFO - Filling up the DagBag from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:08:28,190] {scheduler_job.py:1532} INFO - DAG(s) dict_keys(['divvy_dirty_money']) retrieved from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:08:28,199] {scheduler_job.py:156} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: dag
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 148, in _run_file_processor
+    result = scheduler_job.process_file(file_path, pickle_dags)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 1540, in process_file
+    dag.sync_to_db()
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/models/dag.py", line 1318, in sync_to_db
+    DagModel).filter(DagModel.dag_id == self.dag_id).first()
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3232, in first
+    ret = list(self[0:1])
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3018, in __getitem__
+    return list(res)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3334, in __iter__
+    return self._execute_and_instances(context)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3359, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1253, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1473, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: dag
+[SQL: SELECT dag.dag_id AS dag_dag_id, dag.is_paused AS dag_is_paused, dag.is_subdag AS dag_is_subdag, dag.is_active AS dag_is_active, dag.last_scheduler_run AS dag_last_scheduler_run, dag.last_pickled AS dag_last_pickled, dag.last_expired AS dag_last_expired, dag.scheduler_lock AS dag_scheduler_lock, dag.pickle_id AS dag_pickle_id, dag.fileloc AS dag_fileloc, dag.owners AS dag_owners, dag.description AS dag_description, dag.default_view AS dag_default_view, dag.schedule_interval AS dag_schedule_interval 
+FROM dag 
+WHERE dag.dag_id = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('divvy_dirty_money', 1, 0)]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+[2019-09-28 13:09:10,432] {scheduler_job.py:146} INFO - Started process (PID=1813) to work on /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:09:10,442] {scheduler_job.py:1520} INFO - Processing file /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py for tasks to queue
+[2019-09-28 13:09:10,443] {logging_mixin.py:95} INFO - [2019-09-28 13:09:10,442] {dagbag.py:90} INFO - Filling up the DagBag from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:09:10,452] {scheduler_job.py:1532} INFO - DAG(s) dict_keys(['divvy_dirty_money']) retrieved from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:09:10,461] {scheduler_job.py:156} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: dag
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 148, in _run_file_processor
+    result = scheduler_job.process_file(file_path, pickle_dags)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 1540, in process_file
+    dag.sync_to_db()
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/models/dag.py", line 1318, in sync_to_db
+    DagModel).filter(DagModel.dag_id == self.dag_id).first()
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3232, in first
+    ret = list(self[0:1])
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3018, in __getitem__
+    return list(res)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3334, in __iter__
+    return self._execute_and_instances(context)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3359, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1253, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1473, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: dag
+[SQL: SELECT dag.dag_id AS dag_dag_id, dag.is_paused AS dag_is_paused, dag.is_subdag AS dag_is_subdag, dag.is_active AS dag_is_active, dag.last_scheduler_run AS dag_last_scheduler_run, dag.last_pickled AS dag_last_pickled, dag.last_expired AS dag_last_expired, dag.scheduler_lock AS dag_scheduler_lock, dag.pickle_id AS dag_pickle_id, dag.fileloc AS dag_fileloc, dag.owners AS dag_owners, dag.description AS dag_description, dag.default_view AS dag_default_view, dag.schedule_interval AS dag_schedule_interval 
+FROM dag 
+WHERE dag.dag_id = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('divvy_dirty_money', 1, 0)]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+[2019-09-28 13:09:52,691] {scheduler_job.py:146} INFO - Started process (PID=2214) to work on /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:09:52,701] {scheduler_job.py:1520} INFO - Processing file /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py for tasks to queue
+[2019-09-28 13:09:52,702] {logging_mixin.py:95} INFO - [2019-09-28 13:09:52,702] {dagbag.py:90} INFO - Filling up the DagBag from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:09:52,712] {scheduler_job.py:1532} INFO - DAG(s) dict_keys(['divvy_dirty_money']) retrieved from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:09:52,721] {scheduler_job.py:156} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: dag
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 148, in _run_file_processor
+    result = scheduler_job.process_file(file_path, pickle_dags)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 1540, in process_file
+    dag.sync_to_db()
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/models/dag.py", line 1318, in sync_to_db
+    DagModel).filter(DagModel.dag_id == self.dag_id).first()
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3232, in first
+    ret = list(self[0:1])
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3018, in __getitem__
+    return list(res)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3334, in __iter__
+    return self._execute_and_instances(context)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3359, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1253, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1473, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: dag
+[SQL: SELECT dag.dag_id AS dag_dag_id, dag.is_paused AS dag_is_paused, dag.is_subdag AS dag_is_subdag, dag.is_active AS dag_is_active, dag.last_scheduler_run AS dag_last_scheduler_run, dag.last_pickled AS dag_last_pickled, dag.last_expired AS dag_last_expired, dag.scheduler_lock AS dag_scheduler_lock, dag.pickle_id AS dag_pickle_id, dag.fileloc AS dag_fileloc, dag.owners AS dag_owners, dag.description AS dag_description, dag.default_view AS dag_default_view, dag.schedule_interval AS dag_schedule_interval 
+FROM dag 
+WHERE dag.dag_id = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('divvy_dirty_money', 1, 0)]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+[2019-09-28 13:10:34,929] {scheduler_job.py:146} INFO - Started process (PID=2613) to work on /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:10:34,939] {scheduler_job.py:1520} INFO - Processing file /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py for tasks to queue
+[2019-09-28 13:10:34,940] {logging_mixin.py:95} INFO - [2019-09-28 13:10:34,940] {dagbag.py:90} INFO - Filling up the DagBag from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:10:34,950] {scheduler_job.py:1532} INFO - DAG(s) dict_keys(['divvy_dirty_money']) retrieved from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:10:34,959] {scheduler_job.py:156} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: dag
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 148, in _run_file_processor
+    result = scheduler_job.process_file(file_path, pickle_dags)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 1540, in process_file
+    dag.sync_to_db()
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/models/dag.py", line 1318, in sync_to_db
+    DagModel).filter(DagModel.dag_id == self.dag_id).first()
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3232, in first
+    ret = list(self[0:1])
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3018, in __getitem__
+    return list(res)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3334, in __iter__
+    return self._execute_and_instances(context)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3359, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1253, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1473, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: dag
+[SQL: SELECT dag.dag_id AS dag_dag_id, dag.is_paused AS dag_is_paused, dag.is_subdag AS dag_is_subdag, dag.is_active AS dag_is_active, dag.last_scheduler_run AS dag_last_scheduler_run, dag.last_pickled AS dag_last_pickled, dag.last_expired AS dag_last_expired, dag.scheduler_lock AS dag_scheduler_lock, dag.pickle_id AS dag_pickle_id, dag.fileloc AS dag_fileloc, dag.owners AS dag_owners, dag.description AS dag_description, dag.default_view AS dag_default_view, dag.schedule_interval AS dag_schedule_interval 
+FROM dag 
+WHERE dag.dag_id = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('divvy_dirty_money', 1, 0)]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+[2019-09-28 13:11:17,161] {scheduler_job.py:146} INFO - Started process (PID=3016) to work on /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:11:17,171] {scheduler_job.py:1520} INFO - Processing file /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py for tasks to queue
+[2019-09-28 13:11:17,172] {logging_mixin.py:95} INFO - [2019-09-28 13:11:17,172] {dagbag.py:90} INFO - Filling up the DagBag from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:11:17,182] {scheduler_job.py:1532} INFO - DAG(s) dict_keys(['divvy_dirty_money']) retrieved from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:11:17,190] {scheduler_job.py:156} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: dag
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 148, in _run_file_processor
+    result = scheduler_job.process_file(file_path, pickle_dags)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 1540, in process_file
+    dag.sync_to_db()
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/models/dag.py", line 1318, in sync_to_db
+    DagModel).filter(DagModel.dag_id == self.dag_id).first()
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3232, in first
+    ret = list(self[0:1])
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3018, in __getitem__
+    return list(res)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3334, in __iter__
+    return self._execute_and_instances(context)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3359, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1253, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1473, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: dag
+[SQL: SELECT dag.dag_id AS dag_dag_id, dag.is_paused AS dag_is_paused, dag.is_subdag AS dag_is_subdag, dag.is_active AS dag_is_active, dag.last_scheduler_run AS dag_last_scheduler_run, dag.last_pickled AS dag_last_pickled, dag.last_expired AS dag_last_expired, dag.scheduler_lock AS dag_scheduler_lock, dag.pickle_id AS dag_pickle_id, dag.fileloc AS dag_fileloc, dag.owners AS dag_owners, dag.description AS dag_description, dag.default_view AS dag_default_view, dag.schedule_interval AS dag_schedule_interval 
+FROM dag 
+WHERE dag.dag_id = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('divvy_dirty_money', 1, 0)]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+[2019-09-28 13:11:59,397] {scheduler_job.py:146} INFO - Started process (PID=3418) to work on /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:11:59,406] {scheduler_job.py:1520} INFO - Processing file /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py for tasks to queue
+[2019-09-28 13:11:59,407] {logging_mixin.py:95} INFO - [2019-09-28 13:11:59,407] {dagbag.py:90} INFO - Filling up the DagBag from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:11:59,417] {scheduler_job.py:1532} INFO - DAG(s) dict_keys(['divvy_dirty_money']) retrieved from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:11:59,426] {scheduler_job.py:156} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: dag
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 148, in _run_file_processor
+    result = scheduler_job.process_file(file_path, pickle_dags)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 1540, in process_file
+    dag.sync_to_db()
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/models/dag.py", line 1318, in sync_to_db
+    DagModel).filter(DagModel.dag_id == self.dag_id).first()
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3232, in first
+    ret = list(self[0:1])
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3018, in __getitem__
+    return list(res)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3334, in __iter__
+    return self._execute_and_instances(context)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3359, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1253, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1473, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: dag
+[SQL: SELECT dag.dag_id AS dag_dag_id, dag.is_paused AS dag_is_paused, dag.is_subdag AS dag_is_subdag, dag.is_active AS dag_is_active, dag.last_scheduler_run AS dag_last_scheduler_run, dag.last_pickled AS dag_last_pickled, dag.last_expired AS dag_last_expired, dag.scheduler_lock AS dag_scheduler_lock, dag.pickle_id AS dag_pickle_id, dag.fileloc AS dag_fileloc, dag.owners AS dag_owners, dag.description AS dag_description, dag.default_view AS dag_default_view, dag.schedule_interval AS dag_schedule_interval 
+FROM dag 
+WHERE dag.dag_id = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('divvy_dirty_money', 1, 0)]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+[2019-09-28 13:12:41,535] {scheduler_job.py:146} INFO - Started process (PID=3842) to work on /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:12:41,544] {scheduler_job.py:1520} INFO - Processing file /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py for tasks to queue
+[2019-09-28 13:12:41,545] {logging_mixin.py:95} INFO - [2019-09-28 13:12:41,545] {dagbag.py:90} INFO - Filling up the DagBag from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:12:41,558] {scheduler_job.py:1532} INFO - DAG(s) dict_keys(['divvy_dirty_money']) retrieved from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:12:41,567] {scheduler_job.py:156} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: dag
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 148, in _run_file_processor
+    result = scheduler_job.process_file(file_path, pickle_dags)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 1540, in process_file
+    dag.sync_to_db()
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/models/dag.py", line 1318, in sync_to_db
+    DagModel).filter(DagModel.dag_id == self.dag_id).first()
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3232, in first
+    ret = list(self[0:1])
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3018, in __getitem__
+    return list(res)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3334, in __iter__
+    return self._execute_and_instances(context)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3359, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1253, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1473, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: dag
+[SQL: SELECT dag.dag_id AS dag_dag_id, dag.is_paused AS dag_is_paused, dag.is_subdag AS dag_is_subdag, dag.is_active AS dag_is_active, dag.last_scheduler_run AS dag_last_scheduler_run, dag.last_pickled AS dag_last_pickled, dag.last_expired AS dag_last_expired, dag.scheduler_lock AS dag_scheduler_lock, dag.pickle_id AS dag_pickle_id, dag.fileloc AS dag_fileloc, dag.owners AS dag_owners, dag.description AS dag_description, dag.default_view AS dag_default_view, dag.schedule_interval AS dag_schedule_interval 
+FROM dag 
+WHERE dag.dag_id = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('divvy_dirty_money', 1, 0)]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+[2019-09-28 13:13:23,648] {scheduler_job.py:146} INFO - Started process (PID=4262) to work on /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:13:23,656] {scheduler_job.py:1520} INFO - Processing file /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py for tasks to queue
+[2019-09-28 13:13:23,657] {logging_mixin.py:95} INFO - [2019-09-28 13:13:23,657] {dagbag.py:90} INFO - Filling up the DagBag from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:13:23,669] {scheduler_job.py:1532} INFO - DAG(s) dict_keys(['divvy_dirty_money']) retrieved from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:13:23,678] {scheduler_job.py:156} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: dag
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 148, in _run_file_processor
+    result = scheduler_job.process_file(file_path, pickle_dags)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 1540, in process_file
+    dag.sync_to_db()
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/models/dag.py", line 1318, in sync_to_db
+    DagModel).filter(DagModel.dag_id == self.dag_id).first()
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3232, in first
+    ret = list(self[0:1])
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3018, in __getitem__
+    return list(res)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3334, in __iter__
+    return self._execute_and_instances(context)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3359, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1253, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1473, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: dag
+[SQL: SELECT dag.dag_id AS dag_dag_id, dag.is_paused AS dag_is_paused, dag.is_subdag AS dag_is_subdag, dag.is_active AS dag_is_active, dag.last_scheduler_run AS dag_last_scheduler_run, dag.last_pickled AS dag_last_pickled, dag.last_expired AS dag_last_expired, dag.scheduler_lock AS dag_scheduler_lock, dag.pickle_id AS dag_pickle_id, dag.fileloc AS dag_fileloc, dag.owners AS dag_owners, dag.description AS dag_description, dag.default_view AS dag_default_view, dag.schedule_interval AS dag_schedule_interval 
+FROM dag 
+WHERE dag.dag_id = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('divvy_dirty_money', 1, 0)]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+[2019-09-28 13:14:05,758] {scheduler_job.py:146} INFO - Started process (PID=4664) to work on /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:14:05,770] {scheduler_job.py:1520} INFO - Processing file /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py for tasks to queue
+[2019-09-28 13:14:05,771] {logging_mixin.py:95} INFO - [2019-09-28 13:14:05,771] {dagbag.py:90} INFO - Filling up the DagBag from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:14:05,783] {scheduler_job.py:1532} INFO - DAG(s) dict_keys(['divvy_dirty_money']) retrieved from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:14:05,793] {scheduler_job.py:156} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: dag
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 148, in _run_file_processor
+    result = scheduler_job.process_file(file_path, pickle_dags)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 1540, in process_file
+    dag.sync_to_db()
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/models/dag.py", line 1318, in sync_to_db
+    DagModel).filter(DagModel.dag_id == self.dag_id).first()
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3232, in first
+    ret = list(self[0:1])
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3018, in __getitem__
+    return list(res)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3334, in __iter__
+    return self._execute_and_instances(context)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3359, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1253, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1473, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: dag
+[SQL: SELECT dag.dag_id AS dag_dag_id, dag.is_paused AS dag_is_paused, dag.is_subdag AS dag_is_subdag, dag.is_active AS dag_is_active, dag.last_scheduler_run AS dag_last_scheduler_run, dag.last_pickled AS dag_last_pickled, dag.last_expired AS dag_last_expired, dag.scheduler_lock AS dag_scheduler_lock, dag.pickle_id AS dag_pickle_id, dag.fileloc AS dag_fileloc, dag.owners AS dag_owners, dag.description AS dag_description, dag.default_view AS dag_default_view, dag.schedule_interval AS dag_schedule_interval 
+FROM dag 
+WHERE dag.dag_id = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('divvy_dirty_money', 1, 0)]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+[2019-09-28 13:14:47,868] {scheduler_job.py:146} INFO - Started process (PID=5065) to work on /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:14:47,877] {scheduler_job.py:1520} INFO - Processing file /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py for tasks to queue
+[2019-09-28 13:14:47,878] {logging_mixin.py:95} INFO - [2019-09-28 13:14:47,877] {dagbag.py:90} INFO - Filling up the DagBag from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:14:47,890] {scheduler_job.py:1532} INFO - DAG(s) dict_keys(['divvy_dirty_money']) retrieved from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:14:47,900] {scheduler_job.py:156} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: dag
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 148, in _run_file_processor
+    result = scheduler_job.process_file(file_path, pickle_dags)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 1540, in process_file
+    dag.sync_to_db()
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/models/dag.py", line 1318, in sync_to_db
+    DagModel).filter(DagModel.dag_id == self.dag_id).first()
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3232, in first
+    ret = list(self[0:1])
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3018, in __getitem__
+    return list(res)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3334, in __iter__
+    return self._execute_and_instances(context)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3359, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1253, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1473, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: dag
+[SQL: SELECT dag.dag_id AS dag_dag_id, dag.is_paused AS dag_is_paused, dag.is_subdag AS dag_is_subdag, dag.is_active AS dag_is_active, dag.last_scheduler_run AS dag_last_scheduler_run, dag.last_pickled AS dag_last_pickled, dag.last_expired AS dag_last_expired, dag.scheduler_lock AS dag_scheduler_lock, dag.pickle_id AS dag_pickle_id, dag.fileloc AS dag_fileloc, dag.owners AS dag_owners, dag.description AS dag_description, dag.default_view AS dag_default_view, dag.schedule_interval AS dag_schedule_interval 
+FROM dag 
+WHERE dag.dag_id = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('divvy_dirty_money', 1, 0)]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+[2019-09-28 13:15:29,971] {scheduler_job.py:146} INFO - Started process (PID=5467) to work on /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:15:29,980] {scheduler_job.py:1520} INFO - Processing file /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py for tasks to queue
+[2019-09-28 13:15:29,981] {logging_mixin.py:95} INFO - [2019-09-28 13:15:29,980] {dagbag.py:90} INFO - Filling up the DagBag from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:15:29,991] {scheduler_job.py:1532} INFO - DAG(s) dict_keys(['divvy_dirty_money']) retrieved from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:15:30,002] {scheduler_job.py:156} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: dag
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 148, in _run_file_processor
+    result = scheduler_job.process_file(file_path, pickle_dags)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 1540, in process_file
+    dag.sync_to_db()
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/models/dag.py", line 1318, in sync_to_db
+    DagModel).filter(DagModel.dag_id == self.dag_id).first()
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3232, in first
+    ret = list(self[0:1])
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3018, in __getitem__
+    return list(res)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3334, in __iter__
+    return self._execute_and_instances(context)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3359, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1253, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1473, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: dag
+[SQL: SELECT dag.dag_id AS dag_dag_id, dag.is_paused AS dag_is_paused, dag.is_subdag AS dag_is_subdag, dag.is_active AS dag_is_active, dag.last_scheduler_run AS dag_last_scheduler_run, dag.last_pickled AS dag_last_pickled, dag.last_expired AS dag_last_expired, dag.scheduler_lock AS dag_scheduler_lock, dag.pickle_id AS dag_pickle_id, dag.fileloc AS dag_fileloc, dag.owners AS dag_owners, dag.description AS dag_description, dag.default_view AS dag_default_view, dag.schedule_interval AS dag_schedule_interval 
+FROM dag 
+WHERE dag.dag_id = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('divvy_dirty_money', 1, 0)]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+[2019-09-28 13:16:12,063] {scheduler_job.py:146} INFO - Started process (PID=5876) to work on /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:16:12,071] {scheduler_job.py:1520} INFO - Processing file /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py for tasks to queue
+[2019-09-28 13:16:12,073] {logging_mixin.py:95} INFO - [2019-09-28 13:16:12,072] {dagbag.py:90} INFO - Filling up the DagBag from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:16:12,085] {scheduler_job.py:1532} INFO - DAG(s) dict_keys(['divvy_dirty_money']) retrieved from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:16:12,097] {scheduler_job.py:156} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: dag
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 148, in _run_file_processor
+    result = scheduler_job.process_file(file_path, pickle_dags)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 1540, in process_file
+    dag.sync_to_db()
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/models/dag.py", line 1318, in sync_to_db
+    DagModel).filter(DagModel.dag_id == self.dag_id).first()
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3232, in first
+    ret = list(self[0:1])
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3018, in __getitem__
+    return list(res)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3334, in __iter__
+    return self._execute_and_instances(context)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3359, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1253, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1473, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: dag
+[SQL: SELECT dag.dag_id AS dag_dag_id, dag.is_paused AS dag_is_paused, dag.is_subdag AS dag_is_subdag, dag.is_active AS dag_is_active, dag.last_scheduler_run AS dag_last_scheduler_run, dag.last_pickled AS dag_last_pickled, dag.last_expired AS dag_last_expired, dag.scheduler_lock AS dag_scheduler_lock, dag.pickle_id AS dag_pickle_id, dag.fileloc AS dag_fileloc, dag.owners AS dag_owners, dag.description AS dag_description, dag.default_view AS dag_default_view, dag.schedule_interval AS dag_schedule_interval 
+FROM dag 
+WHERE dag.dag_id = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('divvy_dirty_money', 1, 0)]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+[2019-09-28 13:16:54,167] {scheduler_job.py:146} INFO - Started process (PID=6287) to work on /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:16:54,175] {scheduler_job.py:1520} INFO - Processing file /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py for tasks to queue
+[2019-09-28 13:16:54,176] {logging_mixin.py:95} INFO - [2019-09-28 13:16:54,175] {dagbag.py:90} INFO - Filling up the DagBag from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:16:54,187] {scheduler_job.py:1532} INFO - DAG(s) dict_keys(['divvy_dirty_money']) retrieved from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:16:54,196] {scheduler_job.py:156} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: dag
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 148, in _run_file_processor
+    result = scheduler_job.process_file(file_path, pickle_dags)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 1540, in process_file
+    dag.sync_to_db()
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/models/dag.py", line 1318, in sync_to_db
+    DagModel).filter(DagModel.dag_id == self.dag_id).first()
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3232, in first
+    ret = list(self[0:1])
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3018, in __getitem__
+    return list(res)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3334, in __iter__
+    return self._execute_and_instances(context)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3359, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1253, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1473, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: dag
+[SQL: SELECT dag.dag_id AS dag_dag_id, dag.is_paused AS dag_is_paused, dag.is_subdag AS dag_is_subdag, dag.is_active AS dag_is_active, dag.last_scheduler_run AS dag_last_scheduler_run, dag.last_pickled AS dag_last_pickled, dag.last_expired AS dag_last_expired, dag.scheduler_lock AS dag_scheduler_lock, dag.pickle_id AS dag_pickle_id, dag.fileloc AS dag_fileloc, dag.owners AS dag_owners, dag.description AS dag_description, dag.default_view AS dag_default_view, dag.schedule_interval AS dag_schedule_interval 
+FROM dag 
+WHERE dag.dag_id = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('divvy_dirty_money', 1, 0)]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+[2019-09-28 13:17:36,285] {scheduler_job.py:146} INFO - Started process (PID=6690) to work on /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:17:36,293] {scheduler_job.py:1520} INFO - Processing file /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py for tasks to queue
+[2019-09-28 13:17:36,294] {logging_mixin.py:95} INFO - [2019-09-28 13:17:36,294] {dagbag.py:90} INFO - Filling up the DagBag from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:17:36,307] {scheduler_job.py:1532} INFO - DAG(s) dict_keys(['divvy_dirty_money']) retrieved from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:17:36,315] {scheduler_job.py:156} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: dag
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 148, in _run_file_processor
+    result = scheduler_job.process_file(file_path, pickle_dags)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 1540, in process_file
+    dag.sync_to_db()
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/models/dag.py", line 1318, in sync_to_db
+    DagModel).filter(DagModel.dag_id == self.dag_id).first()
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3232, in first
+    ret = list(self[0:1])
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3018, in __getitem__
+    return list(res)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3334, in __iter__
+    return self._execute_and_instances(context)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3359, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1253, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1473, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: dag
+[SQL: SELECT dag.dag_id AS dag_dag_id, dag.is_paused AS dag_is_paused, dag.is_subdag AS dag_is_subdag, dag.is_active AS dag_is_active, dag.last_scheduler_run AS dag_last_scheduler_run, dag.last_pickled AS dag_last_pickled, dag.last_expired AS dag_last_expired, dag.scheduler_lock AS dag_scheduler_lock, dag.pickle_id AS dag_pickle_id, dag.fileloc AS dag_fileloc, dag.owners AS dag_owners, dag.description AS dag_description, dag.default_view AS dag_default_view, dag.schedule_interval AS dag_schedule_interval 
+FROM dag 
+WHERE dag.dag_id = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('divvy_dirty_money', 1, 0)]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+[2019-09-28 13:18:18,394] {scheduler_job.py:146} INFO - Started process (PID=7093) to work on /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:18:18,403] {scheduler_job.py:1520} INFO - Processing file /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py for tasks to queue
+[2019-09-28 13:18:18,404] {logging_mixin.py:95} INFO - [2019-09-28 13:18:18,403] {dagbag.py:90} INFO - Filling up the DagBag from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:18:18,415] {scheduler_job.py:1532} INFO - DAG(s) dict_keys(['divvy_dirty_money']) retrieved from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:18:18,424] {scheduler_job.py:156} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: dag
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 148, in _run_file_processor
+    result = scheduler_job.process_file(file_path, pickle_dags)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 1540, in process_file
+    dag.sync_to_db()
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/models/dag.py", line 1318, in sync_to_db
+    DagModel).filter(DagModel.dag_id == self.dag_id).first()
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3232, in first
+    ret = list(self[0:1])
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3018, in __getitem__
+    return list(res)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3334, in __iter__
+    return self._execute_and_instances(context)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3359, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1253, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1473, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: dag
+[SQL: SELECT dag.dag_id AS dag_dag_id, dag.is_paused AS dag_is_paused, dag.is_subdag AS dag_is_subdag, dag.is_active AS dag_is_active, dag.last_scheduler_run AS dag_last_scheduler_run, dag.last_pickled AS dag_last_pickled, dag.last_expired AS dag_last_expired, dag.scheduler_lock AS dag_scheduler_lock, dag.pickle_id AS dag_pickle_id, dag.fileloc AS dag_fileloc, dag.owners AS dag_owners, dag.description AS dag_description, dag.default_view AS dag_default_view, dag.schedule_interval AS dag_schedule_interval 
+FROM dag 
+WHERE dag.dag_id = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('divvy_dirty_money', 1, 0)]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+[2019-09-28 13:19:00,509] {scheduler_job.py:146} INFO - Started process (PID=7516) to work on /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:19:00,517] {scheduler_job.py:1520} INFO - Processing file /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py for tasks to queue
+[2019-09-28 13:19:00,518] {logging_mixin.py:95} INFO - [2019-09-28 13:19:00,518] {dagbag.py:90} INFO - Filling up the DagBag from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:19:00,533] {scheduler_job.py:1532} INFO - DAG(s) dict_keys(['divvy_dirty_money']) retrieved from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:19:00,542] {scheduler_job.py:156} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: dag
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 148, in _run_file_processor
+    result = scheduler_job.process_file(file_path, pickle_dags)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 1540, in process_file
+    dag.sync_to_db()
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/models/dag.py", line 1318, in sync_to_db
+    DagModel).filter(DagModel.dag_id == self.dag_id).first()
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3232, in first
+    ret = list(self[0:1])
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3018, in __getitem__
+    return list(res)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3334, in __iter__
+    return self._execute_and_instances(context)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3359, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1253, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1473, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: dag
+[SQL: SELECT dag.dag_id AS dag_dag_id, dag.is_paused AS dag_is_paused, dag.is_subdag AS dag_is_subdag, dag.is_active AS dag_is_active, dag.last_scheduler_run AS dag_last_scheduler_run, dag.last_pickled AS dag_last_pickled, dag.last_expired AS dag_last_expired, dag.scheduler_lock AS dag_scheduler_lock, dag.pickle_id AS dag_pickle_id, dag.fileloc AS dag_fileloc, dag.owners AS dag_owners, dag.description AS dag_description, dag.default_view AS dag_default_view, dag.schedule_interval AS dag_schedule_interval 
+FROM dag 
+WHERE dag.dag_id = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('divvy_dirty_money', 1, 0)]
+(Background on this error at: http://sqlalche.me/e/e3q8)
+[2019-09-28 13:19:42,622] {scheduler_job.py:146} INFO - Started process (PID=7931) to work on /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:19:42,631] {scheduler_job.py:1520} INFO - Processing file /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py for tasks to queue
+[2019-09-28 13:19:42,632] {logging_mixin.py:95} INFO - [2019-09-28 13:19:42,632] {dagbag.py:90} INFO - Filling up the DagBag from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:19:42,645] {scheduler_job.py:1532} INFO - DAG(s) dict_keys(['divvy_dirty_money']) retrieved from /Users/Love/Documents/Projects/Expedia-Hotel-Prediction-Workflow/dags/pandasWorkflow DAG.py
+[2019-09-28 13:19:42,654] {scheduler_job.py:156} ERROR - Got an exception! Propagating...
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.OperationalError: no such table: dag
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 148, in _run_file_processor
+    result = scheduler_job.process_file(file_path, pickle_dags)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/jobs/scheduler_job.py", line 1540, in process_file
+    dag.sync_to_db()
+  File "/anaconda3/lib/python3.6/site-packages/airflow/utils/db.py", line 74, in wrapper
+    return func(*args, **kwargs)
+  File "/anaconda3/lib/python3.6/site-packages/airflow/models/dag.py", line 1318, in sync_to_db
+    DagModel).filter(DagModel.dag_id == self.dag_id).first()
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3232, in first
+    ret = list(self[0:1])
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3018, in __getitem__
+    return list(res)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3334, in __iter__
+    return self._execute_and_instances(context)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/orm/query.py", line 3359, in _execute_and_instances
+    result = conn.execute(querycontext.statement, self._params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 988, in execute
+    return meth(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1107, in _execute_clauseelement
+    distilled_params,
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1253, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1473, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1249, in _execute_context
+    cursor, statement, parameters, context
+  File "/anaconda3/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 552, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such table: dag
+[SQL: SELECT dag.dag_id AS dag_dag_id, dag.is_paused AS dag_is_paused, dag.is_subdag AS dag_is_subdag, dag.is_active AS dag_is_active, dag.last_scheduler_run AS dag_last_scheduler_run, dag.last_pickled AS dag_last_pickled, dag.last_expired AS dag_last_expired, dag.scheduler_lock AS dag_scheduler_lock, dag.pickle_id AS dag_pickle_id, dag.fileloc AS dag_fileloc, dag.owners AS dag_owners, dag.description AS dag_description, dag.default_view AS dag_default_view, dag.schedule_interval AS dag_schedule_interval 
+FROM dag 
+WHERE dag.dag_id = ?
+ LIMIT ? OFFSET ?]
+[parameters: ('divvy_dirty_money', 1, 0)]
+(Background on this error at: http://sqlalche.me/e/e3q8)
