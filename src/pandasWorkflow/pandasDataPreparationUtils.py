@@ -36,7 +36,7 @@ def updateIDFieldsToCategoricalFeatures(df):
         
         toc = time.perf_counter()
 
-        logging.info(str(datetime.datetime.now()) + ': ' + "updateIDFieldsToCategoricalFeatures Time elapsed: "+ str(round(toc-tic, 3))+ " seconds")
+        logging.info(str(datetime.datetime.now()) + ': ' + 'updateIDFieldsToCategoricalFeatures Time elapsed: '+ str(round(toc-tic, 3))+ ' seconds')
 
         return df
     except Exception as e:
@@ -63,7 +63,7 @@ def updateISFieldsToBooleanFeatures(df):
         
         toc = time.perf_counter()
 
-        logging.info(str(datetime.datetime.now()) + ': ' + "updateISFieldsToBooleanFeatures Time elapsed: "+ str(round(toc-tic, 3))+ " seconds")
+        logging.info(str(datetime.datetime.now()) + ': ' + 'updateISFieldsToBooleanFeatures Time elapsed: '+ str(round(toc-tic, 3))+ ' seconds')
 
         return df
     except Exception as e:
@@ -94,7 +94,7 @@ def removeHighCardinalityFeatures(df):
         
         toc = time.perf_counter()
 
-        logging.info(str(datetime.datetime.now()) + ': ' + "removeHighCardinalityFeatures Time elapsed: "+ str(round(toc-tic, 3))+ " seconds")
+        logging.info(str(datetime.datetime.now()) + ': ' + 'removeHighCardinalityFeatures Time elapsed: '+ str(round(toc-tic, 3))+ ' seconds')
 
         return df
     except Exception as e:
@@ -119,7 +119,7 @@ def removeHighNULLCntFeatures(df):
         
         toc = time.perf_counter()
 
-        logging.info(str(datetime.datetime.now()) + ': ' + "removeHighNULLCntFeatures Time elapsed: "+ str(round(toc-tic, 3))+ " seconds")
+        logging.info(str(datetime.datetime.now()) + ': ' + 'removeHighNULLCntFeatures Time elapsed: '+ str(round(toc-tic, 3))+ ' seconds')
 
         return df
     except Exception as e:
@@ -143,7 +143,7 @@ def removeRemainingRecordsWithNULLS(df):
         
         toc = time.perf_counter()
 
-        logging.info(str(datetime.datetime.now()) + ': ' + "removeRemainingRecordsWithNULLS Time elapsed: "+ str(round(toc-tic, 3))+ " seconds")
+        logging.info(str(datetime.datetime.now()) + ': ' + 'removeRemainingRecordsWithNULLS Time elapsed: '+ str(round(toc-tic, 3))+ ' seconds')
 
         return df
     except Exception as e:
@@ -171,7 +171,7 @@ def convertCategoricalVariablesToDummyVariables(df):
             
         toc = time.perf_counter()
 
-        logging.info(str(datetime.datetime.now()) + ': ' + "convertCategoricalVariablesToDummyVariables Time elapsed: "+ str(round(toc-tic, 3))+ " seconds")
+        logging.info(str(datetime.datetime.now()) + ': ' + 'convertCategoricalVariablesToDummyVariables Time elapsed: '+ str(round(toc-tic, 3))+ ' seconds')
 
         return df
     except Exception as e:
@@ -199,7 +199,7 @@ def importDataset(parentPath, inputFilePath, s3=False):
 
             toc = time.perf_counter()
 
-            logging.info(str(datetime.datetime.now()) + ': ' + "Import CSV Time elapsed: "+ str(round(toc-tic, 3))+ " seconds")
+            logging.info(str(datetime.datetime.now()) + ': ' + 'Import CSV Time elapsed: '+ str(round(toc-tic, 3))+ ' seconds')
 
             return df
         else:
@@ -209,7 +209,7 @@ def importDataset(parentPath, inputFilePath, s3=False):
 
             toc = time.perf_counter()
 
-            logging.info(str(datetime.datetime.now()) + ': ' + "Import CSV Time elapsed: "+ str(round(toc-tic, 3))+ " seconds")
+            logging.info(str(datetime.datetime.now()) + ': ' + 'Import CSV Time elapsed: '+ str(round(toc-tic, 3))+ ' seconds')
 
             return df
     except Exception as e:
@@ -220,9 +220,10 @@ def logStartOfDataPipeline():
     Function to write to logs to signify the start of the data pipeline
     '''
     try:
-        logging.info("########")
-        logging.info(str(datetime.datetime.now()) + ': ' + "New Data Pipeline Process")
-        logging.info("########")
+        
+        logging.info('########')
+        logging.info(str(datetime.datetime.now()) + ': ' + 'New Data Pipeline Process')
+        logging.info('########')
     except Exception as e:
         logging.info(str(datetime.datetime.now()) + ': ' + 'An Error has Occured in logStartOfApplication: ' + str(e))
         
@@ -231,9 +232,10 @@ def logEndOfDataPipeline():
     Function to write to logs to signify the end of the data pipeline
     '''
     try:
-        logging.info("########")
-        logging.info(str(datetime.datetime.now()) + ': ' + "End of Data Pipeline Process")
-        logging.info("########")
+        
+        logging.info('########')
+        logging.info(str(datetime.datetime.now()) + ': ' + 'End of Data Pipeline Process')
+        logging.info('########')
     except Exception as e:
         logging.info(str(datetime.datetime.now()) + ': ' + 'An Error has Occured in logEndOfDataPipeline: ' + str(e))
         
@@ -259,7 +261,7 @@ def exportDataset(df, outputPath, s3=False):
 
             toc = time.perf_counter()
 
-            logging.info(str(datetime.datetime.now()) + ': ' + "Export CSV Time elapsed: "+ str(round(toc-tic, 3))+ " seconds")
+            logging.info(str(datetime.datetime.now()) + ': ' + 'Export CSV Time elapsed: '+ str(round(toc-tic, 3))+ ' seconds')
 
             return df
         else:
@@ -269,6 +271,6 @@ def exportDataset(df, outputPath, s3=False):
 
             toc = time.perf_counter()
 
-            logging.info(str(datetime.datetime.now()) + ': ' + "Export CSV Time elapsed: "+ str(round(toc-tic, 3))+ " seconds")
+            logging.info(str(datetime.datetime.now()) + ': ' + 'Export CSV Time elapsed: '+ str(round(toc-tic, 3))+ ' seconds')
     except Exception as e:
         logging.info(str(datetime.datetime.now()) + ': ' + 'An Error has Occured in exportDataset: ' + str(e))

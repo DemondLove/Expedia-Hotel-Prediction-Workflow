@@ -11,7 +11,7 @@ from scipy.stats import kurtosis
 
 sys.path.insert(0, '/'.join(sys.path[0].split('/')[:-2]))
 
-import src.pandasWorkflow.pandasDataPreparation as dp
+import src.pandasWorkflow.pandasDataPreparationUtils as dp
 
 parentPath = '/'.join(sys.path[1].split('/')[:-2])
 
