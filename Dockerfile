@@ -19,4 +19,4 @@ RUN pip install --trusted-host pypi.python.org -r requirements.txt
 ENV NAME DLove
 
 # Run app file when the container launches
-CMD ["python","./src/pandasWorkflow/pandasDataPreparationPipeline.py"]
+CMD ["python","./src/pandasWorkflow/pandasDataPipeline.py"]
