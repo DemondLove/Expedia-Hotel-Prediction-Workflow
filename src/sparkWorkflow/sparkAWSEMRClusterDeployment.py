@@ -210,25 +210,25 @@ dtcPredictions = dtcModel.transform(testData)
 evaluator = MulticlassClassificationEvaluator(
     labelCol="label", predictionCol="prediction", metricName="accuracy")
 dtcAccuracy = evaluator.evaluate(dtcPredictions)
-print("Decision Tree accuracy Error = %g" % (1.0 - dtcAccuracy))
+print("Decision Tree accuracy Error = %g" % (dtcAccuracy))
 
 # Calculate and print F1 score for Decision Tree Algorithm
 evaluator = MulticlassClassificationEvaluator(
     labelCol="label", predictionCol="prediction", metricName="f1")
 dtcF1 = evaluator.evaluate(dtcPredictions)
-print("Decision Tree f1 Error = %g" % (1.0 - dtcF1))
+print("Decision Tree f1 Error = %g" % (dtcF1))
 
 # Calculate and print Precision score for Decision Tree Algorithm
 evaluator = MulticlassClassificationEvaluator(
     labelCol="label", predictionCol="prediction", metricName="weightedPrecision")
 dtcWeightedPrecision = evaluator.evaluate(dtcPredictions)
-print("Decision Tree weightedPrecision Error = %g" % (1.0 - dtcWeightedPrecision))
+print("Decision Tree weightedPrecision Error = %g" % (dtcWeightedPrecision))
 
 # Calculate and print Recall score for Decision Tree Algorithm
 evaluator = MulticlassClassificationEvaluator(
     labelCol="label", predictionCol="prediction", metricName="weightedRecall")
 dtcWeightedRecall = evaluator.evaluate(dtcPredictions)
-print("Decision Tree weightedRecall Error = %g" % (1.0 - dtcWeightedRecall))
+print("Decision Tree weightedRecall Error = %g" % (dtcWeightedRecall))
 
 # Train a RandomForest algorithm
 rf = RandomForestClassifier(labelCol="label", featuresCol="features", numTrees=10)
@@ -247,25 +247,25 @@ rfPredictions = rfModel.transform(testData)
 evaluator = MulticlassClassificationEvaluator(
     labelCol="label", predictionCol="prediction", metricName="accuracy")
 rfAccuracy = evaluator.evaluate(rfPredictions)
-print("Random Forest accuracy Error = %g" % (1.0 - rfAccuracy))
+print("Random Forest accuracy Error = %g" % (rfAccuracy))
 
 # Calculate and print F1 score for Random Forest Algorithm
 evaluator = MulticlassClassificationEvaluator(
     labelCol="label", predictionCol="prediction", metricName="f1")
 rfF1 = evaluator.evaluate(rfPredictions)
-print("Random Forest f1 Error = %g" % (1.0 - rfF1))
+print("Random Forest f1 Error = %g" % (rfF1))
 
 # Calculate and print Precision score for Random Forest Algorithm
 evaluator = MulticlassClassificationEvaluator(
     labelCol="label", predictionCol="prediction", metricName="weightedPrecision")
 rfWeightedPrecision = evaluator.evaluate(rfPredictions)
-print("Random Forest weightedPrecision Error = %g" % (1.0 - rfWeightedPrecision))
+print("Random Forest weightedPrecision Error = %g" % (rfWeightedPrecision))
 
 # Calculate and print Recall score for Random Forest Algorithm
 evaluator = MulticlassClassificationEvaluator(
     labelCol="label", predictionCol="prediction", metricName="weightedRecall")
 rfWeightedRecall = evaluator.evaluate(rfPredictions)
-print("Random Forest weightedRecall Error = %g" % (1.0 - rfWeightedRecall))
+print("Random Forest weightedRecall Error = %g" % (rfWeightedRecall))
 
 # Fit the Logistic Regression Algorithm
 lr = LogisticRegression(maxIter=10, regParam=0.1)
@@ -284,25 +284,25 @@ lrPredictions = lrModel.transform(testData)
 evaluator = MulticlassClassificationEvaluator(
     labelCol="label", predictionCol="prediction", metricName="accuracy")
 lrAccuracy = evaluator.evaluate(lrPredictions)
-print("Logistic Regression accuracy Error = %g" % (1.0 - lrAccuracy))
+print("Logistic Regression accuracy Error = %g" % (lrAccuracy))
 
 # Calculate and print F1 score for Logistic Regression Algorithm
 evaluator = MulticlassClassificationEvaluator(
     labelCol="label", predictionCol="prediction", metricName="f1")
 lrF1 = evaluator.evaluate(lrPredictions)
-print("Logistic Regression f1 Error = %g" % (1.0 - lrF1))
+print("Logistic Regression f1 Error = %g" % (lrF1))
 
 # Calculate and print Precision score for Logistic Regression Algorithm
 evaluator = MulticlassClassificationEvaluator(
     labelCol="label", predictionCol="prediction", metricName="weightedPrecision")
 lrWeightedPrecision = evaluator.evaluate(lrPredictions)
-print("Logistic Regression weightedPrecision Error = %g" % (1.0 - lrWeightedPrecision))
+print("Logistic Regression weightedPrecision Error = %g" % (lrWeightedPrecision))
 
 # Calculate and print Recall score for Logistic Regression Algorithm
 evaluator = MulticlassClassificationEvaluator(
     labelCol="label", predictionCol="prediction", metricName="weightedRecall")
 lrWeightedRecall = evaluator.evaluate(lrPredictions)
-print("Logistic Regression weightedRecall Error = %g" % (1.0 - lrWeightedRecall))
+print("Logistic Regression weightedRecall Error = %g" % (lrWeightedRecall))
 
 # Rename the Decision Tree Prediction Column Name
 dtcPredictions = dtcPredictions.selectExpr("prediction as dtcPrediction")
