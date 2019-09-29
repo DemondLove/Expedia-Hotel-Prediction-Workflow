@@ -17,6 +17,8 @@ parentPath = '/'.join(sys.path[1].split('/')[:-2])
 
 logging.basicConfig(filename=parentPath+'/logging/dataPipelineLogging.log',level=logging.DEBUG)
 
+
+
 dp.logStartOfDataPipeline()
 
 ########
