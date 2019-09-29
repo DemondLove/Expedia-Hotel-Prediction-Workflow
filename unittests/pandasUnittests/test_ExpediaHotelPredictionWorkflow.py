@@ -7,7 +7,7 @@ import unittest
 
 sys.path.insert(0, '/'.join(sys.path[0].split('/')[:-2]))
 
-import src.pandasWorkflow.pandasDataPreparation as dp
+import src.pandasWorkflow.pandasDataPreparationUtils as dp
 
 from importlib import reload
 

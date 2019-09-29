@@ -352,3 +352,9 @@ INFO:root:2019-09-28 17:45:23.919195: Export CSV Time elapsed: 29.775 seconds
 INFO:root:########
 INFO:root:2019-09-28 17:45:23.919516: End of Data Pipeline Process
 INFO:root:########
+INFO:root:2019-09-28 19:38:05.374529: updateIDFieldsToCategoricalFeatures Time elapsed: 0.041 seconds
+INFO:root:2019-09-28 19:38:05.398023: convertCategoricalVariablesToDummyVariables Time elapsed: 0.02 seconds
+INFO:root:2019-09-28 19:38:05.701030: removeHighCardinalityFeatures Time elapsed: 0.038 seconds
+INFO:root:2019-09-28 19:38:05.957547: removeHighNULLCntFeatures Time elapsed: 0.01 seconds
+INFO:root:2019-09-28 19:38:06.250866: updateIDFieldsToCategoricalFeatures Time elapsed: 0.03 seconds
+INFO:root:2019-09-28 19:38:06.515180: updateISFieldsToBooleanFeatures Time elapsed: 0.014 seconds

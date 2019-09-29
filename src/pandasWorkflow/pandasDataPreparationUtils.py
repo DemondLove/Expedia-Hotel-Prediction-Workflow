@@ -127,7 +127,7 @@ def removeHighNULLCntFeatures(df):
 
 def removeRemainingRecordsWithNULLS(df):
     '''
-    Remove any rows containing a NULL value, just in case I missed any to this point in the DAG
+    Remove any remaining rows containing a NULL value, just in case I missed any to this point in the DAG
     
     Parameters:
     df (pd.DataFrame): Input dataset from Expedia Hotel Recommendations
